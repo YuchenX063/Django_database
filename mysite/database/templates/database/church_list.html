@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Churches named {{ instName }} in {{ year }}</title>
+</head>
+<body>
+    <h1>Churches named {{ instName }} in {{ year }}</h1>
+    
+    <h2>Churches</h2>
+    <ul>
+        {% for church in churches %}
+            <li>
+                <h2>{{ church.instName }}</h2>
+                <ul>
+                    <li><strong>Institution ID:</strong> {{ church.instID }}</li>
+                    <li><strong>Year:</strong> {{ church.year }}</li>
+                    <li><strong>Church Type:</strong> {{ church.church_type }}</li>
+                    <li><strong>Language:</strong> {{ church.language }}</li>
+                    <li><strong>Note:</strong> {{ church.instNote }}</li>
+                    <li><strong>Place Name:</strong> {{ church.placeName }}</li>
+                    <li><strong>Region:</strong> {{ church.region }}</li>
+                    <li><strong>State:</strong> {{ church.state_orig }}</li>
+                    <li><strong>City:</strong> {{ church.city_reg }}</li>
+                    <li><strong>Latitude:</strong> {{ church.latitude }}</li>
+                    <li><strong>Longitude:</strong> {{ church.longitude }}</li>
+                    <li><strong>Attending Institution ID:</strong> {{ church.attendingInstID }}</li>
+                    <li><strong>Member Type:</strong> {{ church.memberType }}</li>
+                    <li><strong>Member:</strong> {{ church.member }}</li>
+                    <li><strong>Affiliated:</strong> {{ church.affiliated }}</li>
+                </ul>
+                <!-- List related persons for this church -->
+                <h3>Related Persons:</h3>
+                <ul>
+                    {% for cp in church.persons.all %}
+                        <li>
+                            <a href="{% url 'person_detail' cp.person.persID|urlencode cp.person.year %}">{{ cp.person.persName }}</a>
+                        </li>
+                    {% empty %}
+                        <li>No related persons found.</li>
+                    {% endfor %}
+                </ul>
+            </li>
+        {% empty %}
+            <li>No churches found with the name {{ instName }} in {{ year }}.</li>
+        {% endfor %}
+    </ul>
+
+    <h2>Small Churches</h2>
+    <ul>
+        {% for small_church in small_churches %}
+            <li>
+                <h2>{{ small_church.instName }}</h2>
+                <ul>
+                    <li><strong>Institution ID:</strong> {{ small_church.instID }}</li>
+                    <li><strong>Year:</strong> {{ small_church.year }}</li>
+                    <li><strong>Church Type:</strong> {{ small_church.church_type }}</li>
+                    <li><strong>Language:</strong> {{ small_church.language }}</li>
+                    <li><strong>Note:</strong> {{ small_church.instNote }}</li>
+                    <li><strong>Place Name:</strong> {{ small_church.placeName }}</li>
+                    <li><strong>Region:</strong> {{ small_church.region }}</li>
+                    <li><strong>State:</strong> {{ small_church.state_orig }}</li>
+                    <li><strong>City:</strong> {{ small_church.city_reg }}</li>
+                    <li><strong>Latitude:</strong> {{ small_church.latitude }}</li>
+                    <li><strong>Longitude:</strong> {{ small_church.longitude }}</li>
+                    <li><strong>Attending Institution ID:</strong> {{ small_church.attendingInstID }}</li>
+                    <li><strong>Attending Institution Name:</strong> 
+                        {% if small_church.attending_church_name %}
+                            <a href="{% url 'church_detail' instID=small_church.attending_church_link.instID year=small_church.attending_church_link.year %}">{{ small_church.attending_church_name }}</a>
+                        {% else %}
+                            None
+                        {% endif %}
+                    </li>
+                    <li><strong>Attending Church:</strong> {{ small_church.attendingChurch }}</li>
+                    <li><strong>Attending Church Frequency:</strong> {{ small_church.attendingChurchFrequency }}</li>
+                </ul>
+            </li>
+        {% empty %}
+            <li>No small churches found with the name {{ instName }} in {{ year }}.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

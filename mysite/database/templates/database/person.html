@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ person.persName }}</title>
+</head>
+<body>
+    <h1>{{ person.persName }}</h1>
+    <ul>
+        <li><strong>Person ID:</strong> {{ person.persID }}</li>
+        <li><strong>Year:</strong> {{ person.year }}</li>
+        <li><strong>Title:</strong> {{ person.persTitle }}</li>
+        <li><strong>Suffix:</strong> {{ person.persSuffix }}</li>
+        <li><strong>Note:</strong> {{ person.persNote }}</li>
+    </ul>
+
+    <h2>Related Churches</h2>
+    <ul>
+        {% for cp in related_churches %}
+            <li>
+                <strong>Name:</strong> <a href="{% url 'church_detail' instID=cp.instID year=cp.year_church %}">{{ cp.person_church.instName }}</a><br>
+                <strong>Type:</strong> {{ cp.person_church.church_type }}<br>
+                <strong>Year:</strong> {{ cp.person_church.year }}
+            </li>
+        {% empty %}
+            <li>No related churches found.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

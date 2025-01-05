@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ church.instName }}</title>
+</head>
+<body>
+    <h1>{{ church.instName }}</h1>
+    <p><strong>Institution ID:</strong> {{ church.instID }}</p>
+    <p><strong>Year:</strong> {{ church.year }}</p>
+    <p><strong>Church Type:</strong> {{ church.church_type }}</p>
+    <p><strong>Institution Name:</strong> {{ church.instName }}</p>
+    <p><strong>Language:</strong> {{ church.language }}</p>
+    <p><strong>Note:</strong> {{ church.instNote }}</p>
+    <p><strong>Place Name:</strong> {{ church.placeName }}</p>
+    <p><strong>Region:</strong> {{ church.region }}</p>
+    <p><strong>State:</strong> {{ church.state_orig }}</p>
+    <p><strong>City:</strong> {{ church.city_reg }}</p>
+    <p><strong>Latitude:</strong> {{ church.latitude }}</p>
+    <p><strong>Longitude:</strong> {{ church.longitude }}</p>
+    <p><strong>Attending Institution ID:</strong> {{ church.attendingInstID }}</p>
+    <p><strong>Attending Institution Name:</strong> 
+        {% if attending_church_name != "Unknown" %}
+            <a href="{% url 'church_detail' instID=church.attendingInstID year=church.year %}">{{ attending_church_name }}</a>
+        {% else %}
+            {{ attending_church_name }}
+        {% endif %}
+    </p>
+    <p><strong>Note:</strong> {{ church.attendingChurch }}</p>
+    <p><strong>Attending Frequency:</strong> {{ church.attendingChurchFrequency }}</p>
+</body>
+</html>

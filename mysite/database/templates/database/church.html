@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ church.instName }}</title>
+</head>
+<body>
+    <h1>{{ church.instName }}</h1>
+    <p><strong>Institution ID:</strong> {{ church.instID }}</p>
+    <p><strong>Year:</strong> {{ church.year }}</p>
+    <p><strong>Church Type:</strong> {{ church.church_type }}</p>
+    <p><strong>Language:</strong> {{ church.language }}</p>
+    <p><strong>Note:</strong> {{ church.instNote }}</p>
+    <p><strong>Place Name:</strong> {{ church.placeName }}</p>
+    <p><strong>Region:</strong> {{ church.region }}</p>
+    <p><strong>State:</strong> {{ church.state_orig }}</p>
+    <p><strong>City:</strong> {{ church.city_reg }}</p>
+    <p><strong>Latitude:</strong> {{ church.latitude }}</p>
+    <p><strong>Longitude:</strong> {{ church.longitude }}</p>
+    <p><strong>Member Type:</strong> {{ church.memberType }}</p>
+    <p><strong>Member:</strong> {{ church.member }}</p>
+    <p><strong>Affiliated:</strong> {{ church.affiliated }}</p>
+
+    <h2>Related Persons</h2>
+    <ul>
+        {% for person in related_persons %}
+            <li>
+                <a href="{% url 'person_detail' person.persID|urlencode person.year_person %}">{{ person.persTitle }} {{ person.persName }}</a>
+            </li>
+        {% empty %}
+            <li>No related person found.</li>
+        {% endfor %}
+    </ul>
+
+    <h2>Attending Small Churches</h2>
+    <ul>
+        {% for small_church in attending_small_churches %}
+            <li>
+                <a href="{% url 'church_detail' instID=small_church.instID year=small_church.year %}">{{ small_church.instName }}</a>
+            </li>
+        {% empty %}
+            <li>No attending small churches found.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
