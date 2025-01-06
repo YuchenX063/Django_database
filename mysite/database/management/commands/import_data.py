@@ -89,7 +89,12 @@ class Command(BaseCommand):
             #print(f"Processing Church_Person instance: {item}")
             if temp not in self.rec_church_person and item['persID']:
                 self.rec_church_person.add(temp)
-                church = Church.objects.get(instID=item['instID'], year=item['year'])
+                print(item['instID'], item['persID'], item['year'])
+                try:
+                    church = Church.objects.get(instID=item['instID'], year=item['year'])
+                except Church.DoesNotExist:
+                    print(f"Church with instID {item['instID']} and year {item['year']} does not exist. Skipping.")
+                    continue
                 person = Person.objects.get(persID=item['persID'], year=item['year'])
                 church_person, created = Church_Person.objects.get_or_create(
                     instID=church.instID,
