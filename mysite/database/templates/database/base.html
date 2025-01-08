@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+{% load static %}
+{% load bootstrap5 %}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+
+<head>
+    <meta charset="utf-8">
+    <title>{% block title %}Catholic Almanac Database{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'database/styles.css' %}">
+</head>
+
+<body>
+    <header class="bg-dark text-white text-center py-3">
+        <h1 class="border border-light p-3">Catholic Almanac Database</h1>
+    </header>
+</body>
+
+<main class="my-4">
+    {% block content %}{% endblock %}
+</main>
+
+</html>

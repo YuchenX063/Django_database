@@ -1,31 +1,107 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>{{ church.instName }}</title>
-</head>
-<body>
-    <h1>{{ church.instName }}</h1>
-    <p><strong>Institution ID:</strong> {{ church.instID }}</p>
-    <p><strong>Year:</strong> {{ church.year }}</p>
-    <p><strong>Church Type:</strong> {{ church.church_type }}</p>
-    <p><strong>Institution Name:</strong> {{ church.instName }}</p>
-    <p><strong>Language:</strong> {{ church.language }}</p>
-    <p><strong>Note:</strong> {{ church.instNote }}</p>
-    <p><strong>Place Name:</strong> {{ church.placeName }}</p>
-    <p><strong>Region:</strong> {{ church.region }}</p>
-    <p><strong>State:</strong> {{ church.state_orig }}</p>
-    <p><strong>City:</strong> {{ church.city_reg }}</p>
-    <p><strong>Latitude:</strong> {{ church.latitude }}</p>
-    <p><strong>Longitude:</strong> {{ church.longitude }}</p>
-    <p><strong>Attending Institution ID:</strong> {{ church.attendingInstID }}</p>
-    <p><strong>Attending Institution Name:</strong> 
-        {% if attending_church_name != "Unknown" %}
-            <a href="{% url 'church_detail' instID=church.attendingInstID year=church.year %}">{{ attending_church_name }}</a>
-        {% else %}
-            {{ attending_church_name }}
-        {% endif %}
-    </p>
-    <p><strong>Note:</strong> {{ church.attendingChurch }}</p>
-    <p><strong>Attending Frequency:</strong> {{ church.attendingChurchFrequency }}</p>
-</body>
-</html>
+{% extends "database/base.html" %}
+
+{% block title %}{{ church.instName }}{% endblock %}
+
+{% block content %}
+
+<div class="container">
+    <div class="row">
+        <!-- Small Church Details Table -->
+        <div class="col-md-6">
+            <h2 class="my-4">{{ church.instName }}</h2>
+            <table class="table table-striped">
+                <tbody>
+                    <tr>
+                        <th scope="row">Institution ID</th>
+                        <td>{{ church.instID }}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Year</th>
+                        <td>{{ church.year }}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Church Type</th>
+                        <td>{{ church.church_type }}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Language</th>
+                        <td>{{ church.language }}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Note</th>
+                        <td>{{ church.instNote }}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Place Name</th>
+                        <td>{{ church.placeName }}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Region</th>
+                        <td>{{ church.region }}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">State</th>
+                        <td>{{ church.state_orig }}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">City</th>
+                        <td>{{ church.city_reg }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Related Persons and Attending Churches Tables -->
+        <div class="col-md-6">
+            <h2 class="my-4">Related Persons</h2>
+            <table class="table table-striped">
+                <tbody>
+                    {% for person in related_persons %}
+                    <tr>
+                        <td>{{ forloop.counter }}</td>
+                        <th scope="row">Name</th>
+                        <td>
+                            <a href="{% url 'person_detail' person.persID|urlencode person.year_person %}">{{ person.persTitle }} {{ person.persName }}</a>
+                        </td>
+                    </tr>
+                    {% empty %}
+                    <tr>
+                        <td colspan="2">No related person found.</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+
+            <h2 class="my-4">Attending Institution</h2>
+            <table class="table table-striped">
+                <tbody>
+                    <tr>
+                        <th scope="row">Attending Institution ID</th>
+                        <td>{{ church.attendingInstID }}</td>
+                    </tr>
+                    {% if attending_church_name != "Unknown" %}
+                    <tr>
+                        <th scope="row">Attending Institution Name</th>
+                        <td>
+                            <a href="{% url 'church_detail' instID=church.attendingInstID year=church.year %}">{{ attending_church_name }}</a>
+                        </td>
+                    </tr>
+                    {% else %}
+                    <tr>
+                        <td colspan="2">No attending churches found.</td>
+                    </tr>
+                    {% endif %}
+                    <tr>
+                        <th scope="row">Note</th>
+                        <td>{{ church.attendingChurch }}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Note</th>
+                        <td>{{ church.attendingChurchFrequency }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}

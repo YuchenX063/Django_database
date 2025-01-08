@@ -7,7 +7,7 @@ from .models import Church, Person, Church_Person, Small_Church, Church_Church
 # Create your views here.
 
 def index(request):
-    return HttpResponse("Hello, world. You're at the database index.")
+    return render(request, 'database/index.html')
 
 '''def church_detail(request, instID, year): #query a church by instID and year
     try:
