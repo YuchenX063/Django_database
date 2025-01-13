@@ -47,6 +47,9 @@
                         <th scope="row">City</th>
                         <td>{{ church.city_reg }}</td>
                     </tr>
+                    <tr>
+                        <th scope="row">Diocese</th>
+                        <td>{{ church.diocese }}</td>
                 </tbody>
             </table>
         </div>
@@ -103,5 +106,6 @@
             </table>
         </div>
     </div>
+    <button class="btn btn-outline-dark me-2" onclick="history.back()">Back</button>
 </div>
 {% endblock %}

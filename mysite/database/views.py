@@ -60,8 +60,8 @@ def index(request):
     church_list = church_list.order_by('instID', 'year')
     person_list = person_list.order_by('persID', 'year')
 
-    church_paginator = Paginator(church_list, 10)  # Show 10 churches per page
-    person_paginator = Paginator(person_list, 10)  # Show 10 persons per page
+    church_paginator = Paginator(church_list, 15)  # Show 15 churches per page
+    person_paginator = Paginator(person_list, 15)  # Show 15 persons per page
     
     church_page_number = request.GET.get('church_page')
     person_page_number = request.GET.get('person_page')
