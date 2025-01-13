@@ -65,9 +65,6 @@ class Command(BaseCommand):
         for item in person_info:
             temp = (item['persID'], item['year'])
             if temp not in self.rec_person and item['persID']:
-                if not item['persID']:  # Check if persID has a value
-                    print(f"Skipping Person instance due to missing persID: {item}")
-                    continue
                 self.rec_person.add(temp)
                 person, created = Person.objects.get_or_create(**item)
                 if created:

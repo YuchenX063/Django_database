@@ -4,6 +4,7 @@ from django.http import Http404
 from django.shortcuts import render, get_object_or_404
 from .models import Church, Person, Church_Person, Small_Church, Church_Church
 from django.core.paginator import Paginator
+from itertools import chain
 
 # Create your views here.
 
@@ -13,10 +14,12 @@ def index(request):
     place_name = request.GET.get('place_name')
     
     church_list = Church.objects.all()
+    small_church_list = Small_Church.objects.all()
     person_list = Person.objects.all()
     
     if church_name and not person_name and not place_name:
         church_list = church_list.filter(instName__icontains=church_name)
+        small_church_list = small_church_list.filter(instName__icontains=church_name)
         related_persons = Church_Person.objects.filter(person_church__instName__icontains=church_name).values_list('person', flat=True)
         person_list = Person.objects.filter(id__in=related_persons)
         # person_church -- the related churches according to the Church_Person model
@@ -28,11 +31,13 @@ def index(request):
     
     if place_name and not church_name and not person_name:
         church_list = church_list.filter(city_reg__icontains=place_name)
+        small_church_list = small_church_list.filter(city_reg__icontains=place_name)
         related_persons = Church_Person.objects.filter(person_church__city_reg__icontains=place_name).values_list('person', flat=True)
         person_list = Person.objects.filter(id__in=related_persons)
 
     if church_name and place_name:
         church_list = church_list.filter(instName__icontains=church_name, city_reg__icontains=place_name)
+        small_church_list = small_church_list.filter(instName__icontains=church_name, city_reg__icontains=place_name)
         related_persons = Church_Person.objects.filter(person_church__instName__icontains=church_name, person_church__city_reg__icontains=place_name).values_list('person', flat=True)
         person_list = Person.objects.filter(id__in=related_persons)
 
@@ -58,9 +63,12 @@ def index(request):
         person_list = person_list.filter(id__in=person_ids)
 
     church_list = church_list.order_by('instID', 'year')
+    small_church_list = small_church_list.order_by('instID', 'year')
     person_list = person_list.order_by('persID', 'year')
 
-    church_paginator = Paginator(church_list, 15)  # Show 15 churches per page
+    church_combined_list = list(chain(church_list, small_church_list))
+
+    church_paginator = Paginator(church_combined_list, 15)  # Show 15 churches per page
     person_paginator = Paginator(person_list, 15)  # Show 15 persons per page
     
     church_page_number = request.GET.get('church_page')
