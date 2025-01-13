@@ -10,11 +10,18 @@
     <meta charset="utf-8">
     <title>{% block title %}Catholic Almanac Database{% endblock %}</title>
     <link rel="stylesheet" href="{% static 'database/styles.css' %}">
+    <style>
+        .nowrap {
+            white-space: nowrap;
+        }
+    </style>
 </head>
 
 <body>
     <header class="bg-dark text-white text-center py-3">
-        <h1 class="border border-light p-3">Catholic Almanac Database</h1>
+        <h1 class="border border-light p-3">
+            <a href="{% url 'index' %}" class="text-white text-decoration-none">Catholic Almanac Database</a>
+        </h1>
     </header>
 </body>
 

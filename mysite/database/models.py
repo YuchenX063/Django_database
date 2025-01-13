@@ -17,6 +17,7 @@ class Church(models.Model):
     memberType = models.CharField(max_length=255)
     member = models.CharField(max_length=255)
     affiliated = models.CharField(max_length=255)
+    diocese = models.CharField(max_length=255, null=True, blank=True)
 
     class Meta:
         unique_together = (('instID', 'year'),)
@@ -40,6 +41,7 @@ class Small_Church(models.Model):
     attendingInstID = models.CharField(max_length=255)
     attendingChurch = models.CharField(max_length=255)
     attendingChurchFrequency = models.CharField(max_length=255)
+    diocese = models.CharField(max_length=255, null=True, blank=True)
 
     class Meta:
         unique_together = (('instID', 'year'),)

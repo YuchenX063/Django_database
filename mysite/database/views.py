@@ -3,11 +3,79 @@ from django.http import HttpResponse
 from django.http import Http404
 from django.shortcuts import render, get_object_or_404
 from .models import Church, Person, Church_Person, Small_Church, Church_Church
+from django.core.paginator import Paginator
 
 # Create your views here.
 
 def index(request):
-    return render(request, 'database/index.html')
+    church_name = request.GET.get('church_name')
+    person_name = request.GET.get('person_name')
+    place_name = request.GET.get('place_name')
+    
+    church_list = Church.objects.all()
+    person_list = Person.objects.all()
+    
+    if church_name and not person_name and not place_name:
+        church_list = church_list.filter(instName__icontains=church_name)
+        related_persons = Church_Person.objects.filter(person_church__instName__icontains=church_name).values_list('person', flat=True)
+        person_list = Person.objects.filter(id__in=related_persons)
+        # person_church -- the related churches according to the Church_Person model
+    
+    if person_name and not church_name and not place_name:
+        person_list = person_list.filter(persName__icontains=person_name)
+        related_churches = Church_Person.objects.filter(person__persName__icontains=person_name).values_list('person_church', flat=True)
+        church_list = Church.objects.filter(id__in=related_churches)
+    
+    if place_name and not church_name and not person_name:
+        church_list = church_list.filter(city_reg__icontains=place_name)
+        related_persons = Church_Person.objects.filter(person_church__city_reg__icontains=place_name).values_list('person', flat=True)
+        person_list = Person.objects.filter(id__in=related_persons)
+
+    if church_name and place_name:
+        church_list = church_list.filter(instName__icontains=church_name, city_reg__icontains=place_name)
+        related_persons = Church_Person.objects.filter(person_church__instName__icontains=church_name, person_church__city_reg__icontains=place_name).values_list('person', flat=True)
+        person_list = Person.objects.filter(id__in=related_persons)
+
+    if church_name and person_name:
+        church_person_list = Church_Person.objects.filter(person_church__instName__icontains=church_name, person__persName__icontains=person_name)
+        church_ids = church_person_list.values_list('person_church__id', flat=True)
+        person_ids = church_person_list.values_list('person__id', flat=True)
+        church_list = church_list.filter(id__in=church_ids)
+        person_list = person_list.filter(id__in=person_ids)
+    
+    if place_name and person_name:
+        church_person_list = Church_Person.objects.filter(person_church__city_reg__icontains=place_name, person__persName__icontains=person_name)
+        church_ids = church_person_list.values_list('person_church__id', flat=True)
+        person_ids = church_person_list.values_list('person__id', flat=True)
+        church_list = church_list.filter(id__in=church_ids)
+        person_list = person_list.filter(id__in=person_ids)
+    
+    if church_name and place_name and person_name:
+        church_person_list = Church_Person.objects.filter(person_church__instName__icontains=church_name, person__persName__icontains=person_name, person_church__city_reg__icontains=place_name)
+        church_ids = church_person_list.values_list('person_church__id', flat=True)
+        person_ids = church_person_list.values_list('person__id', flat=True)
+        church_list = church_list.filter(id__in=church_ids)
+        person_list = person_list.filter(id__in=person_ids)
+
+    church_list = church_list.order_by('instID', 'year')
+    person_list = person_list.order_by('persID', 'year')
+
+    church_paginator = Paginator(church_list, 10)  # Show 10 churches per page
+    person_paginator = Paginator(person_list, 10)  # Show 10 persons per page
+    
+    church_page_number = request.GET.get('church_page')
+    person_page_number = request.GET.get('person_page')
+    
+    church_page_obj = church_paginator.get_page(church_page_number)
+    person_page_obj = person_paginator.get_page(person_page_number)
+    
+    return render(request, 'database/index.html', {
+        'church_page_obj': church_page_obj,
+        'person_page_obj': person_page_obj,
+        'church_name': church_name,
+        'person_name': person_name,
+        'place_name': place_name
+    })
 
 '''def church_detail(request, instID, year): #query a church by instID and year
     try:

@@ -29,8 +29,8 @@ class Command(BaseCommand):
             if df:
                 print("First row:", df[0])
 
-        church_keys = ['instID', 'year', 'church_type', 'instName', 'language', 'instNote', 'placeName', 'region', 'state_orig', 'city_reg', 'latitude', 'longitude', 'attendingInstID', 'memberType', 'member', 'affiliated']
-        small_church_keys = ['instID', 'year', 'church_type', 'instName', 'language', 'instNote', 'placeName', 'region', 'state_orig', 'city_reg', 'latitude', 'longitude', 'attendingInstID', 'attendingChurch', 'attendingChurchFrequency']
+        church_keys = ['instID', 'year', 'church_type', 'instName', 'language', 'instNote', 'placeName', 'region', 'state_orig', 'city_reg', 'latitude', 'longitude', 'attendingInstID', 'memberType', 'member', 'affiliated', 'diocese']
+        small_church_keys = ['instID', 'year', 'church_type', 'instName', 'language', 'instNote', 'placeName', 'region', 'state_orig', 'city_reg', 'latitude', 'longitude', 'attendingInstID', 'attendingChurch', 'attendingChurchFrequency', 'diocese']
         person_keys = ['persID', 'year', 'persTitle', 'persName', 'persSuffix', 'persNote']
         church_person_keys = ['instID', 'persID', 'year', 'persTitle', 'persName']
         church_church_keys = ['instID', 'attendingInstID', 'year']

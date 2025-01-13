@@ -3,5 +3,106 @@
 {% block title %}Homepage{% endblock %}
 
 {% block content %}
-<h2 class="w-100 p-3 text-center">Welcome to the Catholic Almanac Database :)</h2>
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8 d-flex align-items-center">
+            <span class="mb-0 me-2 nowrap">Search by: </span>
+            <form id="searchForm" method="get" action="{% url 'index' %}" class="d-flex form-inline my-2 my-lg-0 w-100">
+                <input class="form-control me-2 w-25" type="search" placeholder="church name" aria-label="Search" name="church_name" value="{{ request.GET.church_name }}">
+                <span class="me-2 align-self-center">and</span>
+                <input class="form-control me-2 w-25" type="search" placeholder="person name" aria-label="Search" name="person_name" value="{{ request.GET.person_name }}">
+                <span class="me-2 align-self-center">and</span>
+                <input class="form-control me-2 w-25" type="search" placeholder="place name" aria-label="Search" name="place_name" value="{{ request.GET.place_name }}">
+                <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </div>
+    <div class="row mt-4">
+        <div class="col-md-6">
+            <h3>Churches</h3>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Year</th>
+                        <th>City/Region</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for church in church_page_obj %}
+                    <tr>
+                        <td>
+                            <a href="{% url 'church_detail' instID=church.instID year=church.year %}">{{ church.instName }}</a>
+                        </td>
+                        <td>{{ church.year }}</td>
+                        <td>{{ church.city_reg }}</td>
+                    </tr>
+                    {% empty %}
+                    <tr>
+                        <td colspan="3">No churches found.</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+
+            <div class="pagination">
+                <span class="step-links">
+                    {% if church_page_obj.has_previous %}
+                        <a href="?church_page=1&church_name={{ request.GET.church_name }}&person_name={{ request.GET.person_name }}&place_name={{ request.GET.place_name }}" class="btn btn-outline-dark">&laquo; first</a>
+                        <a href="?church_page={{ church_page_obj.previous_page_number }}&church_name={{ request.GET.church_name }}&person_name={{ request.GET.person_name }}&place_name={{ request.GET.place_name }}" class="btn btn-outline-dark">previous</a>
+                    {% endif %}
+
+                    <span class="current">
+                        Page {{ church_page_obj.number }} of {{ church_page_obj.paginator.num_pages }}.
+                    </span>
+
+                    {% if church_page_obj.has_next %}
+                        <a href="?church_page={{ church_page_obj.next_page_number }}&church_name={{ request.GET.church_name }}&person_name={{ request.GET.person_name }}&place_name={{ request.GET.place_name }}" class="btn btn-outline-dark">next</a>
+                        <a href="?church_page={{ church_page_obj.paginator.num_pages }}&church_name={{ request.GET.church_name }}&person_name={{ request.GET.person_name }}&place_name={{ request.GET.place_name }}" class="btn btn-outline-dark">last &raquo;</a>
+                    {% endif %}
+                </span>
+            </div>
+        </div>
+        
+        <div class="col-md-6">
+            <h3>Persons</h3>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Year</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for person in person_page_obj %}
+                        <tr>
+                            <td><a href="{% url 'person_detail' persID=person.persID year=person.year %}">{{ person.persTitle }} {{ person.persName }}</a></td>
+                            <td>{{ person.year }}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+
+            <div class="pagination">
+                <span class="step-links">
+                    {% if person_page_obj.has_previous %}
+                        <a href="?person_page=1&church_name={{ request.GET.church_name }}&person_name={{ request.GET.person_name }}&place_name={{ request.GET.place_name }}" class="btn btn-outline-dark">&laquo; first</a>
+                        <a href="?person_page={{ person_page_obj.previous_page_number }}&church_name={{ request.GET.church_name }}&person_name={{ request.GET.person_name }}&place_name={{ request.GET.place_name }}" class="btn btn-outline-dark">previous</a>
+                    {% endif %}
+
+                    <span class="current">
+                        Page {{ person_page_obj.number }} of {{ person_page_obj.paginator.num_pages }}.
+                    </span>
+
+                    {% if person_page_obj.has_next %}
+                        <a href="?person_page={{ person_page_obj.next_page_number }}&church_name={{ request.GET.church_name }}&person_name={{ request.GET.person_name }}&place_name={{ request.GET.place_name }}" class="btn btn-outline-dark">next</a>
+                        <a href="?person_page={{ person_page_obj.paginator.num_pages }}&church_name={{ request.GET.church_name }}&person_name={{ request.GET.person_name }}&place_name={{ request.GET.place_name }}" class="btn btn-outline-dark">last &raquo;</a>
+                    {% endif %}
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
 {% endblock %}

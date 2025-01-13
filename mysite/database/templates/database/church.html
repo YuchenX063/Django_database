@@ -8,7 +8,7 @@
     <div class="row">
         <!-- Church Details Table -->
         <div class="col-md-6">
-            <h2 class="my-4">{{ church.instName }}</h2>
+            <h3 class="my-4">{{ church.instName }}</h3>
             <table class="table table-striped">
                 <tbody>
                     <tr>
@@ -53,7 +53,7 @@
 
         <!-- Related Persons and Attending Small Churches Tables -->
         <div class="col-md-6">
-            <h2 class="my-4">Related Persons</h2>
+            <h3 class="my-4">Related Persons</h3>
             <table class="table table-striped">
                 <tbody>
                     {% for person in related_persons %}
@@ -70,7 +70,7 @@
                 </tbody>
             </table>
 
-            <h2 class="my-4">Attending Small Churches</h2>
+            <h3 class="my-4">Attending Small Churches</h3>
             <table class="table table-striped">
                 <tbody>
                     {% for small_church in attending_small_churches %}
@@ -88,5 +88,6 @@
             </table>
         </div>
     </div>
+    <button class="btn btn-outline-dark me-2" onclick="history.back()">Back</button>
 </div>
 {% endblock %}
