@@ -23,6 +23,44 @@
             <a href="{% url 'index' %}" class="text-white text-decoration-none">Catholic Almanac Database</a>
         </h1>
     </header>
+
+    <nav>
+        <ul class="nav nav-tabs" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="search-by-name-tab" data-bs-toggle="tab" data-bs-target="#search-by-name" type="button" role="tab" aria-controls="search-by-name" aria-selected="true"> Search by Name</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="seearch-by-ID-tab" data-bs-toggle="tab" data-bs-target="#search-by-ID" type="button" role="tab" aria-controls="search-by-ID" aria-selected="false"> Search by ID</button>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="tab-content">
+        <div class="tab-pane fade show active" id="search-by-name" role="tabpanel" area-labelledby="search-by-name-tab">
+            <div class="row justify-content-center">
+                <div class="col-md-8 d-flex align-items-center">
+                    <form id="searchForm" method="get" action="{% url 'index' %}" class="d-flex form-inline my-2 my-lg-0 w-100">
+                        <input class="form-control me-2 w-25" type="search" placeholder="church name" aria-label="Search" name="church_name" value="{{ request.GET.church_name }}">
+                        <span class="me-2 align-self-center">and</span>
+                        <input class="form-control me-2 w-25" type="search" placeholder="person name" aria-label="Search" name="person_name" value="{{ request.GET.person_name }}">
+                        <span class="me-2 align-self-center">and</span>
+                        <input class="form-control me-2 w-25" type="search" placeholder="place name" aria-label="Search" name="place_name" value="{{ request.GET.place_name }}">
+                        <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="search-by-ID" role="tabpanel" area-labelledby="search-by-id-tab">
+            <div class="col-md-8 d-flex align-items-center">
+                <form id="searchForm" method="get" action="{% url 'index' %}" class="d-flex form-inline my-2 my-lg-0 w-100">
+                    <input class="form-control me-2 w-25" type="search" placeholder="church ID" aria-label="Search" name="church_name" value="{{ request.GET.church_name }}">
+                    <span class="me-2 align-self-center">or</span>
+                    <input class="form-control me-2 w-25" type="search" placeholder="person ID" aria-label="Search" name="person_name" value="{{ request.GET.person_name }}">
+                    <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
+                </form>
+            </div>
+        </div> 
+    </div>
 </body>
 
 <main class="my-4">
