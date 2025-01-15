@@ -12,6 +12,9 @@ def index(request):
     church_name = request.GET.get('church_name')
     person_name = request.GET.get('person_name')
     place_name = request.GET.get('place_name')
+
+    church_id = request.GET.get('church_instID')
+    person_id = request.GET.get('person_persID')
     
     church_list = Church.objects.all()
     small_church_list = Small_Church.objects.all()
@@ -61,6 +64,17 @@ def index(request):
         person_ids = church_person_list.values_list('person__id', flat=True)
         church_list = church_list.filter(id__in=church_ids)
         person_list = person_list.filter(id__in=person_ids)
+
+    if church_id:
+        church_list = Church.objects.filter(instID=church_id)
+        small_church_list = Small_Church.objects.filter(instID=church_id)
+        related_persons = Church_Person.objects.filter(person_church__instID__icontains=church_id).values_list('person', flat=True)
+        person_list = Person.objects.filter(id__in=related_persons)
+
+    if person_id:  
+        person_list = Person.objects.filter(persID=person_id)
+        related_churches = Church_Person.objects.filter(person__persID__icontains=person_id).values_list('person_church', flat=True)
+        church_list = Church.objects.filter(id__in=related_churches)
 
     church_list = church_list.order_by('instID', 'year')
     small_church_list = small_church_list.order_by('instID', 'year')

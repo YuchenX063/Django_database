@@ -35,11 +35,11 @@
         </ul>
     </nav>
 
-    <div class="tab-content">
+    <div class="tab-content mt-3 hidden">
         <div class="tab-pane fade show active" id="search-by-name" role="tabpanel" area-labelledby="search-by-name-tab">
-            <div class="row justify-content-center">
+            <div class="row justify-content-start">
                 <div class="col-md-8 d-flex align-items-center">
-                    <form id="searchForm" method="get" action="{% url 'index' %}" class="d-flex form-inline my-2 my-lg-0 w-100">
+                    <form id="searchForm" method="get" action="{% url 'index' %}" class="d-flex form-inline my-2 my-lg-0 w-100 ms-3">
                         <input class="form-control me-2 w-25" type="search" placeholder="church name" aria-label="Search" name="church_name" value="{{ request.GET.church_name }}">
                         <span class="me-2 align-self-center">and</span>
                         <input class="form-control me-2 w-25" type="search" placeholder="person name" aria-label="Search" name="person_name" value="{{ request.GET.person_name }}">
@@ -51,16 +51,38 @@
             </div>
         </div>
         <div class="tab-pane fade" id="search-by-ID" role="tabpanel" area-labelledby="search-by-id-tab">
-            <div class="col-md-8 d-flex align-items-center">
-                <form id="searchForm" method="get" action="{% url 'index' %}" class="d-flex form-inline my-2 my-lg-0 w-100">
-                    <input class="form-control me-2 w-25" type="search" placeholder="church ID" aria-label="Search" name="church_name" value="{{ request.GET.church_name }}">
-                    <span class="me-2 align-self-center">or</span>
-                    <input class="form-control me-2 w-25" type="search" placeholder="person ID" aria-label="Search" name="person_name" value="{{ request.GET.person_name }}">
-                    <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
-                </form>
+            <div class="row justify-content-start">
+                <div class="col-md-8 d-flex align-items-center">
+                    <form id="searchForm" method="get" action="{% url 'index' %}" class="d-flex form-inline my-2 my-lg-0 w-100 ms-3">
+                      <input class="form-control me-2 w-25" type="search" placeholder="church ID" aria-label="Search" name="church_instID" value="{{ request.GET.church_instID }}">
+                        <span class="me-2 align-self-center">or</span>
+                        <input class="form-control me-2 w-25" type="search" placeholder="person ID" aria-label="Search" name="person_persID" value="{{ request.GET.person_persID }}">
+                        <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
+                    </form>
+                </div>
             </div>
         </div> 
     </div>
+
+    <script>
+        // Save the active tab to local storage
+        document.querySelectorAll('button[data-bs-toggle="tab"]').forEach(button => {
+            button.addEventListener('click', function () {
+                localStorage.setItem('activeTab', this.id);
+            });
+        });
+
+        // Restore the active tab from local storage
+        document.addEventListener('DOMContentLoaded', function () {
+            const activeTab = localStorage.getItem('activeTab');
+            if (activeTab) {
+                const tabButton = document.getElementById(activeTab);
+                const tab = new bootstrap.Tab(tabButton);
+                tab.show();
+            }
+            document.getElementById('tab-content').classList.remove('hidden');
+        });
+    </script>
 </body>
 
 <main class="my-4">
