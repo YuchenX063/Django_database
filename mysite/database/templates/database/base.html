@@ -8,81 +8,133 @@
 
 <head>
     <meta charset="utf-8">
-    <title>{% block title %}Catholic Almanac Database{% endblock %}</title>
+    <title>{% block title %}Catholic Almanacs Database{% endblock %}</title>
     <link rel="stylesheet" href="{% static 'database/styles.css' %}">
     <style>
         .nowrap {
             white-space: nowrap;
         }
+        .custom-accordion-button {
+            background-color: #ffffff;
+            color: #40343e;
+            border-color: #ca52e5;
+        }
+        .search-button {
+            height: 38px;
+            align-self: flex-end;
+        }
     </style>
 </head>
 
 <body>
-    <header class="bg-dark text-white text-center py-3">
-        <h1 class="border border-light p-3">
-            <a href="{% url 'index' %}" class="text-white text-decoration-none">Catholic Almanac Database</a>
-        </h1>
-    </header>
-
-    <nav>
-        <ul class="nav nav-tabs" role="tablist">
-            <li class="nav-item" role="presentation">
-                <button class="nav-link active" id="search-by-name-tab" data-bs-toggle="tab" data-bs-target="#search-by-name" type="button" role="tab" aria-controls="search-by-name" aria-selected="true"> Search by Name</button>
-            </li>
-            <li class="nav-item" role="presentation">
-                <button class="nav-link" id="seearch-by-ID-tab" data-bs-toggle="tab" data-bs-target="#search-by-ID" type="button" role="tab" aria-controls="search-by-ID" aria-selected="false"> Search by ID</button>
-            </li>
-        </ul>
-    </nav>
-
-    <div class="tab-content mt-3 hidden">
-        <div class="tab-pane fade show active" id="search-by-name" role="tabpanel" area-labelledby="search-by-name-tab">
-            <div class="row justify-content-start">
-                <div class="col-md-8 d-flex align-items-center">
-                    <form id="searchForm" method="get" action="{% url 'index' %}" class="d-flex form-inline my-2 my-lg-0 w-100 ms-3">
-                        <input class="form-control me-2 w-25" type="search" placeholder="church name" aria-label="Search" name="church_name" value="{{ request.GET.church_name }}">
-                        <span class="me-2 align-self-center">and</span>
-                        <input class="form-control me-2 w-25" type="search" placeholder="person name" aria-label="Search" name="person_name" value="{{ request.GET.person_name }}">
-                        <span class="me-2 align-self-center">and</span>
-                        <input class="form-control me-2 w-25" type="search" placeholder="place name" aria-label="Search" name="place_name" value="{{ request.GET.place_name }}">
-                        <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
-                    </form>
-                </div>
-            </div>
+  <header class="bg-dark text-white py-3 px-3">
+    <div class="d-flex justify-content-between align-items-center border-light border-top border-bottom p-3 w-100">
+        <div class="flex-grow-1 text-center">
+            <h1 class="m-0">
+                <a href="{% url 'index' %}" class="text-white text-decoration-none">Catholic Almanacs Database</a>
+            </h1>
         </div>
-        <div class="tab-pane fade" id="search-by-ID" role="tabpanel" area-labelledby="search-by-id-tab">
-            <div class="row justify-content-start">
-                <div class="col-md-8 d-flex align-items-center">
-                    <form id="searchForm" method="get" action="{% url 'index' %}" class="d-flex form-inline my-2 my-lg-0 w-100 ms-3">
-                      <input class="form-control me-2 w-25" type="search" placeholder="church ID" aria-label="Search" name="church_instID" value="{{ request.GET.church_instID }}">
-                        <span class="me-2 align-self-center">or</span>
-                        <input class="form-control me-2 w-25" type="search" placeholder="person ID" aria-label="Search" name="person_persID" value="{{ request.GET.person_persID }}">
-                        <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
-                    </form>
+        <a href="{% url 'admin:index' %}" class="btn btn-outline-light">Admin</a>
+    </div>
+  </header>
+
+    <div class="accordion" id="accordionExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button custom-accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              Search Institutions
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+                <div class="row justify-content-start">
+                    <div class="col-md-8 d-flex align-items-center">
+                        <form id="searchForm" method="get" action="{% url 'index' %}" class="d-flex form-inline my-2 my-lg-0 w-100 ms-3">
+                          <div class="w-25 me-2">
+                            <label for="church_name">Institution Name</label>
+                            <input class="form-control" type="search" aria-label="Search" name="church_name" value="{{ request.GET.church_name }}">
+                          </div>
+                          <div class="w-25 me-2">
+                            <label for="place_name">City Name</label>
+                            <input class="form-control" type="search" aria-label="Search" name="place_name" value="{{ request.GET.place_name }}">
+                          </div>
+                          <div class="w-25 me-2">
+                            <label for="diocese">Diocese</label>
+                            <input class="form-control" type="search" aria-label="Search" name="diocese" value="{{ request.GET.diocese }}">
+                          </div>
+                          <div class="w-25 me-2">
+                            <label for="year">Year</label>
+                            <input class="form-control" type="search" aria-label="Search" name="year" value="{{ request.GET.year }}">
+                          </div>
+                          <button class="btn btn-outline-primary my-2 my-sm-0 search-button" type="submit">Search</button>
+                        </form>
+                    </div>
                 </div>
             </div>
-        </div> 
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button custom-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              Search People
+            </button>
+          </h2>
+          <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+                <div class="row justify-content-start">
+                    <div class="col-md-8 d-flex align-items-center">
+                        <form id="searchForm" method="get" action="{% url 'index' %}" class="d-flex form-inline my-2 my-lg-0 w-100 ms-3">
+                          <div class="w-25 me-2">
+                            <label for="church_name">Institution Name</label>
+                            <input class="form-control" type="search" aria-label="Search" name="church_name" value="{{ request.GET.church_name }}">
+                          </div>
+                          <div class="w-25 me-2">
+                            <label for="person_name">Person Name</label>
+                            <input class="form-control" type="search" aria-label="Search" name="person_name" value="{{ request.GET.person_name }}">
+                          </div>
+                          <div class="w-25 me-2">
+                            <label for="person_year">Year</label>
+                            <input class="form-control" type="search" aria-label="Search" name="year" value="{{ request.GET.year }}">
+                          </div>
+                          <button class="btn btn-outline-primary my-2 my-sm-0 search-button" type="submit">Search</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button custom-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+              Search by ID
+            </button>
+          </h2>
+          <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+                <div class="row justify-content-start">
+                    <div class="col-md-8 d-flex align-items-center">
+                        <form id="searchForm" method="get" action="{% url 'index' %}" class="d-flex form-inline my-2 my-lg-0 w-100 ms-3">
+                          <div class="w-25 me-2">
+                            <label for="church_instID">Institution ID</label>
+                            <input class="form-control" type="search" aria-label="Search" name="church_instID" value="{{ request.GET.church_instID }}">
+                          </div>
+                          <div class="w-25 me-2">
+                            <label for="person_persID">Person ID</label>
+                            <input class="form-control" type="search" aria-label="Search" name="person_persID" value="{{ request.GET.person_persID }}">
+                          </div>
+                          <div class="w-25 me-2">
+                            <label for="person_year">Year</label>
+                            <input class="form-control" type="search" aria-label="Search" name="year" value="{{ request.GET.year }}">
+                          </div>
+                          <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+          </div>
+      </div>
     </div>
 
-    <script>
-        // Save the active tab to local storage
-        document.querySelectorAll('button[data-bs-toggle="tab"]').forEach(button => {
-            button.addEventListener('click', function () {
-                localStorage.setItem('activeTab', this.id);
-            });
-        });
-
-        // Restore the active tab from local storage
-        document.addEventListener('DOMContentLoaded', function () {
-            const activeTab = localStorage.getItem('activeTab');
-            if (activeTab) {
-                const tabButton = document.getElementById(activeTab);
-                const tab = new bootstrap.Tab(tabButton);
-                tab.show();
-            }
-            document.getElementById('tab-content').classList.remove('hidden');
-        });
-    </script>
 </body>
 
 <main class="my-4">

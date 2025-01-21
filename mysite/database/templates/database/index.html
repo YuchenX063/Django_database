@@ -20,7 +20,7 @@
     </div> --->
     <div class="row mt-4">
         <div class="col-md-6">
-            <h3>Churches</h3>
+            <h3>Institutions</h3>
             <table class="table table-striped">
                 <thead>
                     <tr>
@@ -51,8 +51,8 @@
             <div class="pagination">
                 <span class="step-links">
                     {% if church_page_obj.has_previous %}
-                        <a href="?church_page=1&church_name={{ request.GET.church_name }}&person_name={{ request.GET.person_name }}&place_name={{ request.GET.place_name }}" class="btn btn-outline-dark">&laquo; first</a>
-                        <a href="?church_page={{ church_page_obj.previous_page_number }}&church_name={{ request.GET.church_name }}&person_name={{ request.GET.person_name }}&place_name={{ request.GET.place_name }}" class="btn btn-outline-dark">previous</a>
+                        <a href="?church_page=1&church_name={{ request.GET.church_name }}&person_name={{ request.GET.person_name }}&place_name={{ request.GET.place_name }}&diocese={{ request.GET.diocese }}&year={{ request.GET.year}}" class="btn btn-outline-dark">&laquo; first</a>
+                        <a href="?church_page={{ church_page_obj.previous_page_number }}&church_name={{ request.GET.church_name }}&person_name={{ request.GET.person_name }}&place_name={{ request.GET.place_name }}&diocese={{ request.GET.diocese }}&year={{ request.GET.year}}" class="btn btn-outline-dark">previous</a>
                     {% endif %}
 
                     <span class="current">
@@ -60,15 +60,15 @@
                     </span>
 
                     {% if church_page_obj.has_next %}
-                        <a href="?church_page={{ church_page_obj.next_page_number }}&church_name={{ request.GET.church_name }}&person_name={{ request.GET.person_name }}&place_name={{ request.GET.place_name }}" class="btn btn-outline-dark">next</a>
-                        <a href="?church_page={{ church_page_obj.paginator.num_pages }}&church_name={{ request.GET.church_name }}&person_name={{ request.GET.person_name }}&place_name={{ request.GET.place_name }}" class="btn btn-outline-dark">last &raquo;</a>
+                        <a href="?church_page={{ church_page_obj.next_page_number }}&church_name={{ request.GET.church_name }}&person_name={{ request.GET.person_name }}&place_name={{ request.GET.place_name }}&diocese={{ request.GET.diocese }}&year={{ request.GET.year}}" class="btn btn-outline-dark">next</a>
+                        <a href="?church_page={{ church_page_obj.paginator.num_pages }}&church_name={{ request.GET.church_name }}&person_name={{ request.GET.person_name }}&place_name={{ request.GET.place_name }}&diocese={{ request.GET.diocese }}&year={{ request.GET.year}}" class="btn btn-outline-dark">last &raquo;</a>
                     {% endif %}
                 </span>
             </div>
         </div>
         
         <div class="col-md-6">
-            <h3>Persons</h3>
+            <h3>People</h3>
             <table class="table table-striped">
                 <thead>
                     <tr>
@@ -89,8 +89,8 @@
             <div class="pagination">
                 <span class="step-links">
                     {% if person_page_obj.has_previous %}
-                        <a href="?person_page=1&church_name={{ request.GET.church_name }}&person_name={{ request.GET.person_name }}&place_name={{ request.GET.place_name }}" class="btn btn-outline-dark">&laquo; first</a>
-                        <a href="?person_page={{ person_page_obj.previous_page_number }}&church_name={{ request.GET.church_name }}&person_name={{ request.GET.person_name }}&place_name={{ request.GET.place_name }}" class="btn btn-outline-dark">previous</a>
+                        <a href="?person_page=1&church_name={{ request.GET.church_name }}&person_name={{ request.GET.person_name }}&place_name={{ request.GET.place_name }}&diocese={{ request.GET.diocese }}&year={{ request.GET.year}}" class="btn btn-outline-dark">&laquo; first</a>
+                        <a href="?person_page={{ person_page_obj.previous_page_number }}&church_name={{ request.GET.church_name }}&person_name={{ request.GET.person_name }}&place_name={{ request.GET.place_name }}&diocese={{ request.GET.diocese }}&year={{ request.GET.year}}" class="btn btn-outline-dark">previous</a>
                     {% endif %}
 
                     <span class="current">
@@ -98,8 +98,8 @@
                     </span>
 
                     {% if person_page_obj.has_next %}
-                        <a href="?person_page={{ person_page_obj.next_page_number }}&church_name={{ request.GET.church_name }}&person_name={{ request.GET.person_name }}&place_name={{ request.GET.place_name }}" class="btn btn-outline-dark">next</a>
-                        <a href="?person_page={{ person_page_obj.paginator.num_pages }}&church_name={{ request.GET.church_name }}&person_name={{ request.GET.person_name }}&place_name={{ request.GET.place_name }}" class="btn btn-outline-dark">last &raquo;</a>
+                        <a href="?person_page={{ person_page_obj.next_page_number }}&church_name={{ request.GET.church_name }}&person_name={{ request.GET.person_name }}&place_name={{ request.GET.place_name }}&diocese={{ request.GET.diocese }}&year={{ request.GET.year}}" class="btn btn-outline-dark">next</a>
+                        <a href="?person_page={{ person_page_obj.paginator.num_pages }}&church_name={{ request.GET.church_name }}&person_name={{ request.GET.person_name }}&place_name={{ request.GET.place_name }}&diocese={{ request.GET.diocese }}&year={{ request.GET.year}}" class="btn btn-outline-dark">last &raquo;</a>
                     {% endif %}
                 </span>
             </div>

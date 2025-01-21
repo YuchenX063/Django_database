@@ -1,4 +1,4 @@
 1. the search bar flashes
 2. .css file versus <style> in base.html
-3. layout
-4. possible ways of improvement?
+3. filters
+4. layout
