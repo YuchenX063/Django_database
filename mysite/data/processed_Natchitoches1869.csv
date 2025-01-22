@@ -1,0 +1,32 @@
+﻿instID,church_type,instName,language,instNote,placeName,region,county_orig,county_reg,city_orig,city_reg,state_orig,state_reg,latitude,longitude,attendingInstID,attendingChurch,attendingChurchFrequency,attendingChurchNote,persID,persTitle,persName,persSuffix,persRole,persNote,memberType,member,affiliated,year,diocese
+﻿nat.la.0001,﻿cathedral church,﻿Cathedral Church of the Immaculate Conception,English,,,,,,﻿Natchitoches,﻿Natchitoches,﻿LA,,31.7611778,-93.0874794,,,,,,﻿Rt. Rev.,﻿Aug. M. Martin,﻿D.D.,,,,,,1869,Natchitoches
+﻿nat.la.0001,﻿cathedral church,﻿Cathedral Church of the Immaculate Conception,English,,,,,,﻿Natchitoches,﻿Natchitoches,﻿LA,,31.7611778,-93.0874794,,,,,,﻿Very Rev.,﻿P. F. Dicharry,﻿S.T.V.,,,,,,1869,Natchitoches
+﻿nat.la.0001,﻿cathedral church,﻿Cathedral Church of the Immaculate Conception,English,,,,,,﻿Natchitoches,﻿Natchitoches,﻿LA,,31.7611778,-93.0874794,,,,,,﻿Rev.,﻿F. Martin,,﻿Rector,,,,,1869,Natchitoches
+﻿nat.la.0001,﻿cathedral church,﻿Cathedral Church of the Immaculate Conception,English,,,,,,﻿Natchitoches,﻿Natchitoches,﻿LA,,31.7611778,-93.0874794,,,,,,﻿Rev.,﻿F. Le Vézouët,,﻿Director of the Propagation of the Faith,,,,,1869,Natchitoches
+﻿nat.la.0001,﻿cathedral church,﻿Cathedral Church of the Immaculate Conception,English,,,,,,﻿Natchitoches,﻿Natchitoches,﻿LA,,31.7611778,-93.0874794,,,,,,﻿Rev.,﻿Chauvin,,,,,,,1869,Natchitoches
+﻿nat.la.0001,﻿cathedral church,﻿Cathedral Church of the Immaculate Conception,English,,,,,,﻿Natchitoches,﻿Natchitoches,﻿LA,,31.7611778,-93.0874794,,,,,,﻿Rev.,﻿Mesler,,,,,,,1869,Natchitoches
+﻿nat.la.0002,﻿church,﻿Church of the Nativity,English,,,,﻿Natchitoches Parish,,﻿Camte,﻿Campti,﻿LA,,31.89310362,-93.12250125,,,,,,﻿Rev.,﻿E. Dupré,,,,,,,1869,Natchitoches
+﻿nat.la.0008,﻿church,﻿Church of St. John the Baptist,English,,,,﻿Natchitoches Parish,,﻿Cloutierville,﻿Cloutierville,﻿LA,,31.54618773,-92.91557183,,,,,,﻿Rev.,﻿J. M. Beaulieu,,,,,,,1869,Natchitoches
+﻿nat.la.0011,﻿church,﻿Church of St. Augustine,English,,,,﻿Natchitoches Parish,,﻿Ile Brevelle,﻿Natchez,﻿LA,,31.59382411,-92.97294095,,,,,,﻿Rev.,﻿L. Gallop,,,,,,,1869,Natchitoches
+﻿nat.la.0003,"﻿church, station",﻿Church of St. Rose,English,,,,,,﻿Ile-au-Tigre,﻿Morgan City,﻿LA,,29.69872556,-91.20576269,,,,,,﻿Rev.,﻿E. Forge,,,,,,,1869,Natchitoches
+﻿nat.la.0012,﻿station,﻿Church of St. Anne,English,,,,,,﻿Vieille Rivière,﻿Natchitoches,﻿LA,,31.64091333,-93.0659165,,,,,,﻿Rev.,﻿L. Gallop,,,,,,,1869,Natchitoches
+﻿nat.la.0023,﻿church,﻿Church of St. Paul,English,,,,﻿Parish of Avoyelles,,﻿Ayoelles,﻿Mansura,﻿LA,,31.06058429,-92.04972305,,,,,,﻿Rev.,﻿Jules Janneau,,,,,,,1869,Natchitoches
+﻿nat.la.0024,﻿church,﻿Church of St. Hyacinthe,English,,,,﻿Parish of Avoyelles,,﻿B. des Glaises,﻿Moreauville,﻿LA,,31.03719485,-91.97720617,,,,,,﻿Rev.,﻿T. A. Rebours,,,,,,,1869,Natchitoches
+﻿nat.la.0014,﻿church,﻿Church of St. Francis Xavier,English,,,,﻿Parish of Rapides,,﻿Alexandria,﻿Alexandria,﻿LA,,31.31276327,-92.44777472,,,,,,﻿Rev.,﻿J.B. Avenard,,,,,,,1869,Natchitoches
+﻿nat.la.0034,﻿church,﻿Church of St. Matthew,English,,,,﻿Parish of Ouachita,,﻿Monroe,﻿Monroe,﻿LA,,32.50122677,-92.11550191,,,,,,﻿Rev.,﻿L. Gergaud,,,,,,,1869,Natchitoches
+﻿nat.la.0034,﻿church,﻿Church of St. Matthew,English,,,,﻿Parish of Ouachita,,﻿Monroe,﻿Monroe,﻿LA,,32.50122677,-92.11550191,,,,,,﻿Rev.,﻿Joseph Gentille,,,,,,,1869,Natchitoches
+﻿nat.la.0034,﻿church,﻿Church of St. Matthew,English,,,,﻿Parish of Ouachita,,﻿Monroe,﻿Monroe,﻿LA,,32.50122677,-92.11550191,,,,,,﻿Rev.,﻿Ludovic Esnault,,,,,,,1869,Natchitoches
+﻿nat.la.0035,"﻿""church building""",not recorded,English,,,,,,﻿Bastrop,﻿Bastrop,﻿LA,,32.78283033,-91.91710238,,﻿attended from Monroe,,,,,,,,,,,,1869,Natchitoches
+﻿nat.la.0040,﻿church,﻿Church of St. Mary,English,﻿vacant,,,﻿Parish of Madison,,﻿Milliken's Bend,﻿Tallulah,﻿LA,,32.45722995,-91.1007007,,﻿attended from Monroe,,,,﻿Rev.,﻿Joseph Gentille,,,,,,,1869,Natchitoches
+﻿nat.la.0041,﻿church,not recorded,English,﻿vacant,,,,,﻿Lake Providence,﻿Lake Providence,﻿LA,,32.80290439,-91.17183426,,﻿attended from Monroe,,,,﻿Rev.,﻿Joseph Gentille,,,,,,,1869,Natchitoches
+﻿nat.la.0042,﻿church,﻿Church of the Holy Trinity,English,,,,﻿Parish of Caddo,,﻿Shreveport,﻿Shreveport,﻿LA,,32.51452865,-93.75109642,,,,,,﻿Rev.,﻿John Pierre,,,﻿who also attends St. Ann's Chapel and Despreles' Station,,,,1869,Natchitoches
+﻿nat.la.0042,﻿church,﻿Church of the Holy Apostles,English,﻿vacant,,,﻿Parish of de Soto,,﻿Bayou Pierre,﻿Carmel,﻿LA,,32.05940836,-93.38007163,,,,,,,,,,,,,,1869,Natchitoches
+﻿nat.la.0042,﻿Chapels of Adayes,﻿Church of the Holy Apostles,English,﻿vacant,,,﻿Parish of Natchitoches,,﻿Adayes,﻿Natchitoches (?),﻿LA,,32.05940836,-93.38007163,,,,,,﻿Rev.,﻿F. Le Vezouet,,,,,,,1869,Natchitoches
+﻿nat.la.0053,﻿station,not recorded,English,,,,,,﻿San Miguel,﻿Zwolle,﻿LA,,31.6784813,-93.64277799,,,,,,﻿Rev.,﻿F. Le Vezouet,,,,,,,1869,Natchitoches
+﻿nat.la.0051,﻿station,not recorded,English,,,,,,﻿Manny,﻿Many,﻿LA,,31.56872604,-93.47939099,,,,,,﻿Rev.,﻿F. Le Vezouet,,,,,,,1869,Natchitoches
+﻿nat.la.0056,﻿Chapels of Adayes,﻿Chapel of St. Maurice,English,,,,﻿Parish of Winn,,﻿St. Maurice,﻿St. Maurice,﻿LA,,31.759722,-92.959167,,﻿Attended from Cante.,,,,,,,,,,,,1869,Natchitoches
+﻿nat.la.0056,﻿station,﻿Chapel of St. Maurice,English,,,,﻿Parish of Winn,,﻿Holly Spring,﻿St. Maurice,﻿LA,,31.759722,-92.959167,,﻿Attended from Alexandria,,,,,,,,,,,,1869,Natchitoches
+﻿nat.la.0056,﻿station,﻿Chapel of St. Maurice,English,,,,﻿Parish of Winn,,﻿Prarie,﻿St. Maurice,﻿LA,,31.759722,-92.959167,,﻿Attended from Alexandria,,,,,,,,,,,,1869,Natchitoches
+﻿nat.la.0056,﻿chaplaincy,﻿Chaplaincy of the State Seminary,English,,,,﻿Parish of Winn,,﻿Prarie,﻿St. Maurice,﻿LA,,31.759722,-92.959167,,,,,,﻿Rev.,﻿J. B. Bellier,,,,,,,1869,Natchitoches
+﻿nat.la.0056,"﻿college, day-school",﻿St. Joseph's College,English,"﻿""not reestablished since the war, except as a day school""",,,﻿Winn Parish,,﻿Natchitoches,﻿Natchitoches,﻿LA,,31.759722,-92.959167,,,,,,﻿Rev.,﻿F. Le Vezouet,,,"﻿""under the direction of""",,,,1869,Natchitoches
+﻿nat.la.0059,﻿academy,﻿Academy of the Sacred Heart,English,﻿for young ladies,,,,,﻿Natchitoches,﻿Natchitoches,﻿LA,,31.75052597,-93.09258224,,,,,,﻿Mother,﻿Doremus,﻿Superior,,,,,﻿under the diresction of the Ladies of the Sacred Heart,1869,Natchitoches

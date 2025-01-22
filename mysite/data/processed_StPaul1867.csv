@@ -1,0 +1,118 @@
+﻿instID,church_type,instName,language,instNote,placeName,region,county_orig,county_reg,city_orig,city_reg,state_orig,state_reg,latitude,longitude,attendingInstID,attendingChurch,attendingChurchFrequency,attendingChurchNote,persID,persTitle,persName,persSuffix,persRole,persNote,memberType,member,affiliated,year,diocese
+﻿stp.mn.0001,﻿cathedral,﻿Cathedral of St. Paul,English,"﻿Mass at seven and half-past ten for English-speaking congregation, and at nine for the French congregation. Vespers at half-past three P.M.",﻿corner of Sixth and St. Peter streets,,,,﻿St. Paul,﻿St. Paul,﻿MN,,,,,,,,﻿tgra001,﻿Right Rev.,﻿Thomas L. Grace,﻿D.D.,,,,,,1867,StPaul
+﻿stp.mn.0001,﻿cathedral,﻿Cathedral of St. Paul,English,"﻿Mass at seven and half-past ten for English-speaking congregation, and at nine for the French congregation. Vespers at half-past three P.M.",﻿corner of Sixth and St. Peter streets,,﻿,﻿,﻿St. Paul,﻿St. Paul,﻿MN,,,,,,,,﻿arav001,﻿Very Rev.,﻿A. Ravoux,,﻿V.G.,,,,,1867,StPaul
+﻿stp.mn.0001,﻿cathedral,﻿Cathedral of St. Paul,English,"﻿Mass at seven and half-past ten for English-speaking congregation, and at nine for the French congregation. Vespers at half-past three P.M.",﻿corner of Sixth and St. Peter streets,,﻿,﻿,﻿St. Paul,﻿St. Paul,﻿MN,,,,,,,,,﻿Rev.,﻿A. Oster,,,,,,,1867,StPaul
+﻿stp.mn.0001,﻿cathedral,﻿Cathedral of St. Paul,English,"﻿Mass at seven and half-past ten for English-speaking congregation, and at nine for the French congregation. Vespers at half-past three P.M.",﻿corner of Sixth and St. Peter streets,,﻿,﻿,﻿St. Paul,﻿St. Paul,﻿MN,,,,,,,,﻿jire001,﻿Rev.,﻿John Ireland,,,,,,,1867,StPaul
+﻿stp.mn.0002,﻿church,﻿Assumption Church,﻿German,﻿Mass at seven and ten A.M. Vespers at three P.M.,"﻿Ninth street, between St. Peter and Vine streets",,,,,,﻿MN,,,,,,,,﻿csta001,﻿Rev.,﻿Cl. Staub,﻿O.S.B.,,,,,,1867,StPaul
+﻿stp.mn.0002,﻿church,﻿Assumption Church,﻿German,﻿Mass at seven and ten A.M. Vespers at three P.M.,"﻿Ninth street, between St. Peter and Vine streets",,﻿,﻿,,,﻿MN,,,,,,,,﻿owir001,﻿Rev.,﻿Othmar Wirz,﻿O.S.B.,,,,,,1867,StPaul
+﻿stp.mn.0003,﻿church,﻿St. Mary's Church,English,﻿Mass at half-past ten. Vespers at three.,﻿corner of,,,,,,﻿MN,,,,,,,,﻿lcai001,﻿Rev.,﻿L. E. Caillet,,,,,,,1867,StPaul
+﻿stp.mn.0103,﻿church,﻿St. John's,English,,,,﻿Mower County,﻿Mower County,﻿Adamstown,﻿Adams,﻿MN,,,,,﻿Visited from Faribault,,,,,,,,,,,,1867,StPaul
+﻿stp.mn.0103,﻿church,﻿St. John's,English,,,,﻿Anoka County,﻿Mower County,﻿Anoka,﻿Adams,﻿MN,,,,,﻿Visited from Dayton,,,,,,,,,,,,1867,StPaul
+﻿stp.mn.0169,﻿church,not recorded,English,,,,﻿Sibley County,﻿Sibley County,﻿Arlington,﻿Arlington,﻿MN,,,,,﻿Visited from Henderson,,,,,,,,,,,,1867,StPaul
+﻿stp.mn.0102,﻿church,﻿St. Augustine's,English,,,,﻿Mower County,﻿Mower County,﻿Austin,﻿Austin,﻿MN,,,,,,,,,﻿Rev.,﻿John McDermott,,,,,,,1867,StPaul
+﻿stp.mn.0059,﻿church,﻿Church of ---,English,,,,﻿Freeborn County,﻿Steele County,﻿Beaver Lake,﻿Berlin Township,﻿MN,,,,,﻿Visited from Faribault,,,,,,,,,,,,1867,StPaul
+﻿stp.mn.0063,﻿church,﻿St. Columba's,English,,,,﻿Goodhue County,﻿Goodhue County,﻿Bell Creek,﻿Belle Creek Township,﻿MN,,,,,﻿Visited from Redwing,,,,,,,,,,,,1867,StPaul
+﻿stp.mn.0151,﻿church,﻿St. Martin's,English,,,,﻿Scott County,﻿Scott County,﻿Belle Plaine,﻿Belle Plaine,﻿MN,,,,,﻿,,,﻿aber001,﻿Rev.,﻿Alexander Berghold,,,,,,,1867,StPaul
+﻿stp.mn.0113,﻿church,﻿St. Mary of the Holy Family,English,,,,﻿Morrison County,﻿Morrison County,﻿Belle Prairie,﻿Belle Prairie,﻿MN,,,,,﻿,,,﻿jbuh001,﻿Rev.,﻿Joseph Buh,,,,,,,1867,StPaul
+﻿stp.mn.0113,﻿church,﻿St. Mary of the Holy Family,English,,,,﻿Morrison County,﻿Morrison County,﻿Belle Prairie,﻿Belle Prairie,﻿MN,,,,,,,,,﻿Rev.,﻿Ignatius Tomasin,,,,,,,1867,StPaul
+﻿stp.mn.0118,﻿church,﻿St. Michael's,English,,,,﻿Nicollet County,﻿Nicollet County,﻿Belgrade,﻿Belgrade Township,﻿MN,,,,,﻿Visited from St. Peter,,,,,,,,,,,,1867,StPaul
+﻿stp.mn.0064,﻿church,﻿B.V.,English,,,,﻿Goodhue County,﻿Goodhue County,﻿Belvidere,﻿Belvidere Township,﻿MN,,,,,﻿Visited from Redwing,,,,,,,,,,,,1867,StPaul
+﻿stp.mn.0022,﻿church,﻿St. Bernard's,English,,,,﻿Carver County,﻿Carver County,﻿Benton,,﻿MN,,,,,﻿Visited from Waconia,,,,,,,,,,,,1867,StPaul
+﻿stp.mn.0183,﻿church,not recorded,English,,,,﻿Waseca County,﻿Waseca County,﻿Blooming Grove,﻿Blooming Grove Township maybe?,﻿MN,,,,,﻿Visited from Faribault,,,,,,,,,,,,1867,StPaul
+﻿stp.mn.0084,﻿church,not recorded,English,,,,﻿Houston County,﻿Houston County,﻿Brownsville,﻿Brownsville,﻿MN,,,,,﻿Visited from Hokah,,,,,,,,,,,,1867,StPaul
+﻿stp.mn.0084,﻿church,﻿St. John's,English,,,,﻿Dakota County,﻿Houston County,﻿Byrnsville,﻿Brownsville,﻿MN,,,,,,,,,﻿Rev.,﻿Th. Stephens,,,,,,,1867,StPaul
+﻿stp.mn.0084,﻿church,﻿Holy Cross,English,,,,﻿Wright County,﻿Houston County,﻿Buffalo,﻿Brownsville,﻿MN,,,,,﻿Visited from Frankfort,,,,,,,,,,,,1867,StPaul
+﻿stp.mn.0082,﻿station,not recorded,English,,,,﻿Hennepin County,﻿Hennepin County,﻿Cahil Settlement,,﻿MN,,,,,﻿Visited from S. Anthony's Falls,,,,,,,,,,,,1867,StPaul
+﻿stp.mn.0083,﻿church,﻿St. John Baptist,English,,,,﻿Houston County,﻿Houston County,﻿Caledonia,﻿Caledonia,﻿MN,,,,,﻿,,,,﻿Rev.,﻿E. Essing,,,,,,,1867,StPaul
+﻿stp.mn.0069,﻿church,﻿St. Pius',English,,,,﻿Goodhue County,﻿Goodhue County,﻿Cannon Falls,﻿Cannon Falls,﻿MN,,,,,﻿Visited from New-Treves,,,,,,,,,,,,1867,StPaul
+﻿stp.mn.0069,﻿church,﻿St. Pius',English,,,,﻿Anoka County,﻿Goodhue County,﻿Cedar Creek,﻿Cannon Falls,﻿MN,,,,,﻿Visited from Dayton,,,,,,,,,,,,1867,StPaul
+﻿stp.mn.0154,﻿church,﻿St. Patrick's,English,,,,﻿Scott County,﻿Scott County,﻿Cedar Lake,﻿Cedar Lake Township,﻿MN,,,,,﻿Visited from New-Prague,,,,,,,,,,,,1867,StPaul
+﻿stp.mn.0009,﻿church,﻿St. Genevieve,English,,,,﻿Anoka County,﻿Anoka County,﻿Centreville,﻿Centerville,﻿MN,,,,﻿stp.mn.0007,﻿Visited from Little Canada,,,,,,,,,,,,1867,StPaul
+﻿stp.mn.0023,﻿church,﻿St. Hubert's,English,,,,﻿Carver County,﻿Carver County,﻿Chanhassan,﻿Chanhassan,﻿MN,,,,,﻿Visited from Chaska,,,,,,,,,,,,1867,StPaul
+﻿stp.mn.0050,﻿church,not recorded,English,,,,﻿Fillmore County,﻿Fillmore County,﻿Chatfield,﻿Chatfield,﻿MN,,,,,﻿Visited from Rochester,,,,,,,,,,,,1867,StPaul
+﻿stp.mn.0020,﻿church,﻿Guardian Angels,English,,,,﻿Carver County,﻿Carver County,﻿Chaska,﻿Chaska,﻿MN,,,,,﻿,,,﻿mmay001,﻿Rev.,﻿M. Mayer,,,,,,,1867,StPaul
+﻿stp.mn.0065,﻿station,not recorded,English,,,,﻿Goodhue County,﻿Goodhue County,﻿Cherry Grove,﻿Cherry Grove Township,﻿MN,,,,,﻿Visited from Redwing,,,,,,,,,,,,1867,StPaul
+﻿stp.mn.0065,﻿station,not recorded,English,,,,﻿Wabashaw County,﻿Goodhue County,﻿Chester,﻿Cherry Grove Township,﻿MN,,,,,﻿Visited from Wabashaw,,,,,,,,,,,,1867,StPaul
+﻿stp.mn.0157,﻿church,not recorded,English,,,,﻿Scott County,﻿Scott County,﻿Clary Settlement,,﻿MN,,,,,﻿Visited from Byrnsville,,,,,,,,,,,,1867,StPaul
+﻿stp.mn.0093,﻿church,﻿Nativity of B.V.,English,,,,﻿Le Sueur County,﻿Le Sueur County,﻿Cleveland,﻿Cleveland,﻿MN,,,,,﻿Visited from St. Peter,,,,,,,,,,,,1867,StPaul
+﻿stp.mn.0093,﻿church,﻿Nativity of B.V.,English,,﻿Considine Ridge,,﻿Winona County,﻿Le Sueur County,﻿Cleveland,﻿Cleveland,﻿MN,,,,,﻿Visited from Winona,,,,,,,,,,,,1867,StPaul
+﻿stp.mn.0075,﻿church,﻿St. Mary's,English,,,,﻿Hennepin County,﻿Hennepin County,﻿Corcoran,﻿Corcoran,﻿MN,,,,,﻿Visited from Dayton,,,,,,,,,,,,1867,StPaul
+﻿stp.mn.0018,﻿church,not recorded,English,,,,﻿Brown County,﻿Brown County,﻿Cottonwood,﻿Cottonwood Township,﻿MN,,,,,﻿Visited from Mankato,,,,,,,,,,,,1867,StPaul
+﻿stp.mn.0031,﻿church,﻿St. Francis Xavier's,English,,,,﻿Todd County,,﻿Crow-Wing,﻿Crow Wing,﻿MN,,,,,﻿,,,﻿fpie001,﻿Rev.,﻿Fr.  Pierze,,,,,,,1867,StPaul
+﻿stp.mn.0077,﻿church,﻿Assumption B.V.,English,,,,﻿Hennepin County,﻿Hennepin County,﻿Crystal Lake,﻿Robbinsdale,﻿MN,,,,,﻿Visited from Dayton,,,,,,,,,,,,1867,StPaul
+﻿stp.mn.0073,﻿church,﻿St. John Baptist,English,,,,﻿Hennepin County,﻿Hennepin County,﻿Dayton,﻿Dayton,﻿MN,,,,,﻿,,,,﻿Rev.,﻿L. Nicolas,,,,,,,1867,StPaul
+﻿stp.mn.0073,﻿church,﻿St. John Baptist,English,,,,﻿Steele County,﻿Hennepin County,﻿Deerfield,﻿Dayton,﻿MN,,,,,﻿Visited from Faribault,,,,,,,,,,,,1867,StPaul
+﻿stp.mn.0096,﻿church,not recorded,English,,,,﻿Le Sueur County,﻿Le Sueur County,﻿Derrynane,﻿Derrynane Township,﻿MN,,,,,﻿Visited from Belle Plaine,,,,,,,,,,,,1867,StPaul
+﻿stp.mn.0133,﻿station,not recorded,English,,,,﻿Rice County,﻿Rice County,﻿East-Prairie,,﻿MN,,,,,﻿Visited from Faribault,,,,,,,,,,,,1867,StPaul
+﻿stp.mn.0133,﻿church,not recorded,English,,,,﻿Benton County,﻿Rice County,﻿Elk River,,﻿MN,,,,,﻿Visited from Dayton,,,,,,,,,,,,1867,StPaul
+﻿stp.mn.0134,﻿church,not recorded,English,,,,﻿Rice County,﻿Rice County,﻿Erin,﻿Erin Township,﻿MN,,,,,﻿Visited from Faribault,,,,,,,,,,,,1867,StPaul
+﻿stp.mn.0129,﻿church,﻿Immaculate Conception,English,,,,﻿Rice County,﻿Rice County,﻿Faribault,﻿Faribault,﻿MN,,,,,﻿,,,﻿gkel001,﻿Rev.,﻿J. Keller,,,,,,,1867,StPaul
+﻿stp.mn.0105,﻿station,not recorded,English,,,,﻿Meeker County,﻿Meeker County,﻿Forest City,﻿Forest City,﻿MN,,,,,﻿Visited from St. Cloud,,,,,,,,,,,,1867,StPaul
+﻿stp.mn.0051,﻿church,not recorded,English,,,,﻿Fillmore County,﻿Fillmore County,﻿Forestville,﻿Forestville Township,﻿MN,,,,,﻿Visited from Caledonia,,,,,,,,,,,,1867,StPaul
+﻿stp.mn.0137,﻿station,not recorded,English,,,,﻿Renville County,﻿Nicollet County,﻿Fort Ridgley,﻿Fort Ridgely,﻿MN,,,,,﻿Visited from Mankato,,,,,,,,,,,,1867,StPaul
+﻿stp.mn.0137,﻿church,not recorded,English,,,,﻿Todd County,﻿Nicollet County,﻿Fort Ripley,﻿Fort Ridgely,﻿MN,,,,,﻿Visited from Crow Wing,,,,,,,,,,,,1867,StPaul
+﻿stp.mn.0137,﻿church,﻿Assumption B.V.,English,,,,﻿Carver County,﻿Nicollet County,﻿Francesco,﻿Fort Ridgely,﻿MN,,,,,﻿Visited from Henderson,,,,,,,,,,,,1867,StPaul
+﻿stp.mn.0174,﻿church,﻿St. Michael's,English,,,,﻿Wright County,﻿Wright County,﻿Frankfort,﻿Frankfort Township,﻿MN,,,,,﻿,,,﻿gkoe001,﻿Rev.,﻿Geo. Koering,,,,,,,1867,StPaul
+﻿stp.mn.0176,﻿church,﻿St. Louis',English,,,,﻿Wright County,﻿Wright County,﻿Franklin,﻿Franklin Township,﻿MN,,,,﻿stp.mn.0174,﻿Visited from Frankfort,,,,,,,,,,,,1867,StPaul
+﻿stp.mn.0178,﻿station,not recorded,English,,,,﻿Wright County,﻿Wright County,﻿French Lake,﻿French Lake,﻿MN,,,,﻿stp.mn.0174,﻿Visited from Frankfort,,,,,,,,,,,,1867,StPaul
+﻿stp.mn.0066,﻿station,not recorded,English,,,,﻿Goodhue County,﻿Goodhue County,﻿Frontenac,﻿Frontenac,﻿MN,,,,,﻿Visited from Redwing,,,,,,,,,,,,1867,StPaul
+﻿stp.mn.0089,﻿station,not recorded,English,,,,﻿Houston County,﻿Houston County,﻿Freeburgh,﻿Freeburg,﻿MN,,,,,﻿Visited from Hokah,,,,,,,,,,,,1867,StPaul
+﻿stp.mn.0058,﻿church,﻿Church of ---,English,,,,﻿Freeborn County,﻿Freeborn County,﻿Geneva,﻿Geneva,﻿MN,,,,,﻿Visited from Faribault,,,,,,,,,,,,1867,StPaul
+﻿stp.mn.0058,﻿church,﻿St. Patrick's,English,,,,﻿Sibley County,﻿Freeborn County,﻿Gessenland,﻿Geneva,﻿MN,,,,,﻿Visited from Henderson,,,,,,,,,,,,1867,StPaul
+﻿stp.mn.0058,﻿church,﻿St. Patrick's,English,,,,﻿Wabashaw County,﻿Freeborn County,﻿Glasgow,﻿Geneva,﻿MN,,,,,﻿Visited from Wabashaw,,,,,,,,,,,,1867,StPaul
+﻿stp.mn.0108,﻿church,﻿SS. Peter and Paul's,English,,,,﻿McLeod County,﻿McLeod County,﻿Glencoe,﻿Glencoe,﻿MN,,,,﻿stp.mn.0019,﻿Visited from Waconia,,,,,,,,,,,,1867,StPaul
+﻿stp.mn.0117,﻿church,﻿B.V.,English,,,,﻿Nicollet County,﻿Nicollet County,﻿Granby,﻿Granby Township,﻿MN,,,,,﻿Visited from St. Peter,,,,,,,,,,,,1867,StPaul
+﻿stp.mn.0168,﻿church,not recorded,English,,,,﻿Sibley County,﻿Sibley County,﻿Green Isle,﻿Green Isle,﻿MN,,,,,﻿Vistied from Henderson,,,,,,,,,,,,1867,StPaul
+﻿stp.mn.0168,﻿church,﻿Patronage of B.V.,English,,,,﻿Dakota County,﻿Sibley County,"﻿Hampton, or New-Treves",﻿Green Isle,﻿MN,,,,,,,,,﻿Rev.,﻿P. Bayer,,,,,,,1867,StPaul
+﻿stp.mn.0168,﻿church,﻿Patronage of B.V.,English,﻿See Corcoran.,,,﻿Dakota County,﻿Sibley County,"﻿Hassan, or Corcoran",﻿Green Isle,﻿MN,,,,,,,,,,,,,,,,,1867,StPaul
+﻿stp.mn.0032,﻿church,﻿Guardian Angels,English,,,,﻿Dakota County,﻿Dakota County,﻿Hastings,﻿Hastings,﻿MN,,,,,﻿,,,,﻿Rev.,﻿Fr. Hürth,,,,,,,1867,StPaul
+﻿stp.mn.0124,﻿station,not recorded,English,,,,﻿Olmsted County,﻿Olmstead County,﻿Haverhill,﻿Haverhill Township,﻿MN,,,,,﻿Visited from Rochester,,,,,,,,,,,,1867,StPaul
+﻿stp.mn.0068,﻿station,not recorded,English,,,,﻿Goodhue County,﻿Goodhue County,﻿Hay Creek,﻿Hay Creek Township,﻿MN,,,,,﻿Visited from Redwing,,,,,,,,,,,,1867,StPaul
+﻿stp.mn.0166,﻿church,﻿St. Joseph's,English,,,,﻿Sibley County,﻿Sibley County,﻿Henderson,﻿Henderson,﻿MN,,,,,,,,,﻿Rev.,﻿Theodore Venn,,,,,,,1867,StPaul
+﻿stp.mn.0166,﻿church,﻿St. Joseph's,English,,,,﻿Wabashaw County,﻿Sibley County,﻿Hyde Park,﻿Henderson,﻿MN,,,,,﻿Visited from Wabashaw,,,,,,,,,,,,1867,StPaul
+﻿stp.mn.0189,﻿church,﻿Church of ---,English,,,,﻿Wabashaw County,﻿Wabashaw County,﻿High Land,﻿Highland Township,﻿MN,,,,,﻿Visited from Wabashaw,,,,,,,,,,,,1867,StPaul
+﻿stp.mn.0085,﻿church,not recorded,English,,,,﻿Houston County,﻿Houston County,﻿Hokah,﻿Hokah,﻿MN,,,,,,,,,﻿Rev.,﻿F.X. Neubrand,,,,,,,1867,StPaul
+﻿stp.mn.0085,﻿church,not recorded,English,,,,﻿Houston County,﻿Houston County,﻿Hokah,﻿Hokah,﻿MN,,,,,,,,,﻿Rev.,﻿Matthew Stüremberg,﻿O.S.B.,,,,,,1867,StPaul
+﻿stp.mn.0085,﻿church,﻿Holy Cross,English,,,,﻿Stearns County,﻿Houston County,﻿Hokah,﻿Hokah,﻿MN,,,,﻿stp.mn.0139,﻿Visited from Richmond,,,,,,,,,,,,1867,StPaul
+﻿stp.mn.0078,﻿church,﻿Holy Name of Jesus,English,,,,﻿Hennepin County,﻿Hennepin County,,,﻿MN,,,,,﻿Visited from St. Anthony's Falls,,,,,,,,,,,,1867,StPaul
+﻿stp.mn.0090,﻿station,not recorded,English,,,,﻿Houston County,﻿Houston County,﻿Houston,﻿Houston,﻿MN,,,,,﻿Visited from Caledonia,,,,,,,,,,,,1867,StPaul
+﻿stp.mn.0110,﻿station,not recorded,English,,,,﻿McLeod County,﻿McLeod County,﻿Hutchinson,﻿Hutchinson,﻿MN,,,,﻿stp.mn.0019,﻿Visited from Waconia,,,,,,,,,,,,1867,StPaul
+﻿stp.mn.0110,﻿station,not recorded,English,,,,﻿Wabashaw County,﻿McLeod County,﻿Indian Creek,﻿Hutchinson,﻿MN,,,,,﻿Visited from Wabashaw,,,,,,,,,,,,1867,StPaul
+﻿stp.mn.0036,﻿church,﻿Church of ---,English,,,,﻿Dakota County,﻿Dakota County,﻿Inver Grove,﻿Inver Grove Heights,﻿MN,,,,,﻿Visited from Mendota,,,,,,,,,,,,1867,StPaul
+﻿stp.mn.0185,﻿station,not recorded,English,,,,﻿Waseca County,﻿Waseca County,﻿Janesville,﻿Janesville Township,﻿MN,,,,,﻿Visited from Faribault,,,,,,,,,,,,1867,StPaul
+﻿stp.mn.0185,﻿station,not recorded,English,,﻿Jacobi Settlement,,﻿Stearns County,﻿Waseca County,﻿Janesville,﻿Janesville Township,﻿MN,,,,,﻿Visited from Richmond,,,,,,,,,,,,1867,StPaul
+﻿stp.mn.0088,﻿station,not recorded,English,,,,﻿Houston County,﻿Houston County,﻿Jefferson,﻿Jefferson,﻿MN,,,,,﻿Visited from Caledonia,,,,,,,,,,,,1867,StPaul
+﻿stp.mn.0155,﻿church,not recorded,English,,,,﻿Scott County,﻿Scott County,﻿Jordan,﻿Jordan,﻿MN,,,,,﻿Visited from Belle Plaine,,,,,,,,,,,,1867,StPaul
+﻿stp.mn.0148,﻿station,not recorded,English,,,,﻿Steel County,﻿Steele County,"﻿Juno, or Mulloy Settlement",,,,,,,﻿Visited from Faribault,,,,,,,,,,,,1867,StPaul
+﻿stp.mn.0148,﻿station,not recorded,English,,﻿Kanavan Settlement,,﻿Freeborn County,﻿Steele County,"﻿Juno, or Mulloy Settlement",,﻿MN,,,,,﻿Visited from Faribault,,,,,,,,,,,,1867,StPaul
+﻿stp.mn.0097,﻿station,not recorded,English,,,,﻿Le Sueur County,﻿Le Sueur County,﻿Kilkenny,﻿Kilkenny,﻿MN,,,,﻿stp.mn.0130,﻿Visited from Shieldsville,,,,,,,,,,,,1867,StPaul
+﻿stp.mn.0086,﻿church,﻿Crucifixion,English,,,,﻿Houston County,﻿Houston County,﻿La Crescent,﻿La Crescent,﻿MN,,,,,﻿Visited from Hokah,,,,,,,,,,,,1867,StPaul
+﻿stp.mn.0187,﻿church,not recorded,English,,,,﻿Wabashaw County,﻿Wabashaw County,﻿Lake City,﻿Lake City,﻿MN,,,,,﻿Visited from Wabashaw,,,,,,,,,,,,1867,StPaul
+﻿stp.mn.0187,﻿church,not recorded,English,,,,﻿Hennepin County,﻿Wabashaw County,"﻿Lake Independence, or Green Wood",﻿Lake City,﻿MN,,,,,﻿Visited from Frankfort,,,,,,,,,,,,1867,StPaul
+﻿stp.mn.0187,﻿church,not recorded,English,,,,﻿Washington County,﻿Wabashaw County,﻿Lakeland,﻿Lake City,﻿MN,,,,,﻿Visited from Stillwater,,,,,,,,,,,,1867,StPaul
+﻿stp.mn.0024,﻿church,﻿St. Victoria,English,,,,﻿Carver County,﻿Carver County,﻿Laketown,﻿Laketown Township,﻿MN,,,,,﻿Visited from Chaska,,,,,,,,,,,,1867,StPaul
+﻿stp.mn.0038,﻿church,not recorded,English,,,,﻿Dakota County,﻿Dakota County,﻿Lakeville,﻿Lakeville,﻿MN,,,,,﻿Visited from Hastings,,,,,,,,,,,,1867,StPaul
+﻿stp.mn.0092,﻿church,not recorded,English,,,,﻿Le Sueur County,﻿Le Sueur County,﻿Le Sueur,﻿Le Sueur,﻿MN,,,,﻿stp.mn.0164,﻿Visited from Henderson,,,,,,,,,,,,1867,StPaul
+﻿stp.mn.0039,﻿station,not recorded,English,,,,﻿Dakota County,﻿Dakota County,﻿Lewiston,﻿Sciota Township,﻿MN,,,,,﻿Visited from Hampton,,,,,,,,,,,,1867,StPaul
+﻿stp.mn.0098,﻿station,not recorded,English,,,,﻿Le Sueur County,﻿Le Sueur County,﻿Lexington,﻿Lexington Township,﻿MN,,,,,﻿Visited from New-Prague,,,,,,,,,,,,1867,StPaul
+﻿stp.mn.0007,﻿church,﻿St. John Ev.,English,,,,﻿Ramsay County,﻿Ramsey County,﻿Little Canada,﻿Little Canada,﻿MN,,,,,﻿,,,﻿jgoi001,﻿Rev.,﻿Jos. Goiffon,,,,,,,1867,StPaul
+﻿stp.mn.0114,﻿church,not recorded,English,,,,﻿Morrisson County,﻿Morrison County,﻿Little Falls,﻿Little Falls,﻿MN,,,,﻿stp.mn.0113,﻿Visited from Belle Prairie,,,,,,,,,,,,1867,StPaul
+﻿stp.mn.0114,﻿church,﻿St. Wendelinus,English,,,,﻿Stearns County,﻿Morrison County,﻿Luxemburgh,﻿Little Falls,﻿MN,,,,,﻿Visited from St. Cloud,,,,,,,,,,,,1867,StPaul
+﻿stp.mn.0114,﻿church,﻿St. Wendelinus,English,,﻿Malone Settlement,,﻿Washington County,﻿Morrison County,﻿Luxemburgh,﻿Little Falls,﻿MN,,,,,﻿Visited from Stillwater,,,,,,,,,,,,1867,StPaul
+﻿stp.mn.0012,﻿church,﻿St. Philip's,English,,,,﻿Blue Earth County,﻿Blue Earth County,﻿Mankato,﻿Mankato,﻿MN,,,,,﻿,,,﻿vsom001,﻿Rev.,﻿V. Sommereisen,,,,,,,1867,StPaul
+﻿stp.mn.0081,﻿station,not recorded,English,,,,﻿Hennepin County,﻿Hennepin County,﻿Maple Grove,﻿Maple Grove,﻿MN,,,,,﻿Visited from Dayton,,,,,,,,,,,,1867,StPaul
+﻿stp.mn.0179,﻿station,not recorded,English,,,,﻿Wright County,﻿Wright County,﻿Maple Lake,﻿Maple Lake,﻿MN,,,,,﻿Visited from Frankfort,,,,,,,,,,,,1867,StPaul
+﻿stp.mn.0179,﻿station,not recorded,English,,﻿Marine Mills,,﻿Washington County,﻿Wright County,﻿Maple Lake,﻿Maple Lake,﻿MN,,,,,﻿Visited from Stillwater,,,,,,,,,,,,1867,StPaul
+﻿stp.mn.0122,﻿station,not recorded,English,,,,﻿Olmsted County,﻿Olmstead County,﻿Marion,﻿Marion,﻿MN,,,,,﻿Visited from Rochester,,,,,,,,,,,,1867,StPaul
+﻿stp.mn.0122,﻿church,﻿Immaculate Conception,English,,,,﻿Dakota County,﻿Olmstead County,﻿Marshaw,﻿Marion,﻿MN,,,,,﻿Visited from Hastings,,,,,,,,,,,,1867,StPaul
+﻿stp.mn.0094,﻿church,﻿St. Patrick's,English,,,,﻿Le Sueur County,﻿Le Sueur County,﻿Marysburgh,﻿Marysburg,﻿MN,,,,,﻿Visited from Mankato,,,,,,,,,,,,1867,StPaul
+﻿stp.mn.0067,﻿station,not recorded,English,,,,﻿Wabashaw County,﻿Wabasha County,﻿Mazeppa,﻿Mazeppa,﻿MN,,,,,﻿Visited from Redwing,,,,,,,,,,,,1867,StPaul
+﻿stp.mn.0067,﻿church,﻿St. Francis',English,,﻿Medicine Lake,,﻿Hennepin County,﻿Wabasha County,﻿Mazeppa,﻿Mazeppa,﻿MN,,,,,﻿Visited from Dayton,,,,,,,,,,,,1867,StPaul
+﻿stp.mn.0078,﻿church,not recorded,English,,,,﻿Hennepin County,﻿Hennepin County,﻿Medina,﻿Medina,﻿MN,,,,,﻿Visited from St. Anthony Falls,,,,,,,,,,,,1867,StPaul
+﻿stp.mn.0033,﻿church,﻿St. Peter's,English,,,,﻿Dakota County,﻿Dakota County,﻿Mendota,﻿Mendota,﻿MN,,,,,﻿,,,﻿cgen001,﻿Rev.,﻿C. Genis,,,,,,,1867,StPaul
+﻿stp.mn.0033,﻿church,﻿St. Peter's,English,,﻿Middle Lake,,﻿Nicollet County,﻿Dakota County,﻿Mendota,﻿Mendota,﻿MN,,,,,﻿Visited from St. Peter,,,,,,,,,,,,1867,StPaul
+﻿stp.mn.0072,﻿church,not recorded,English,,,,﻿Hennepin County,﻿Hennepin County,﻿Minneapolis,,﻿MN,,,,,﻿Visited from St. Anthony's Falls,,,,,,,,,,,,1867,StPaul
+﻿stp.mn.0191,﻿station,not recorded,English,,,,﻿Wabashaw County,﻿Wabasha County,﻿Minneiska,﻿Minneiska,﻿MN,,,,,﻿Visited from Wabashaw,,,,,,,,,,,,1867,StPaul
+﻿stp.mn.0191,﻿church,not recorded,English,,,,﻿Blue Earth County,﻿Wabasha County,﻿Minnesota Lake,﻿Minneiska,﻿MN,,,,,﻿Visited Mankato,,,,,,,,,,,,1867,StPaul
+﻿stp.mn.0191,﻿St. Boniface,﻿see St. Boniface,English,,,,﻿Hennepin County,﻿Wabasha County,"﻿Minneiska, or St. Boniface",﻿Minneiska,﻿MN,,,,,,,,,,,,,,,,,1867,StPaul
+﻿stp.mn.0099,﻿station,not recorded,English,,,,﻿Le Sueur County,﻿Le Sueur County,﻿Montgomery,﻿Montgomery,﻿MN,,,,,﻿Visited from Faribault,,,,,,,,,,,,1867,StPaul

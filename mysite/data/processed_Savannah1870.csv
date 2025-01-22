@@ -1,0 +1,66 @@
+﻿instID,church_type,instName,language,instNote,placeName,region,county_orig,county_reg,city_orig,city_reg,state_orig,state_reg,latitude,longitude,attendingInstID,attendingChurch,attendingChurchFrequency,attendingChurchNote,persID,persTitle,persName,persSuffix,persRole,persNote,memberType,member,affiliated,year,diocese
+﻿sav.ga.0001,﻿cathedral,﻿Cathedral of St. John the Baptist,English,,﻿corner of Perry and Drayton streets,,,﻿Chatham County,﻿Savannah,﻿Savannah,﻿GA,,32.0733565,-81.0909827,,,,,﻿aver001,,﻿Augustin Verot,﻿D.D.,﻿Bishop,,,,,1870,Savannah
+﻿sav.ga.0001,﻿cathedral,﻿Cathedral of St. John the Baptist,English,,﻿corner of Perry and Drayton streets,,,﻿Chatham County,﻿Savannah,﻿Savannah,﻿GA,,32.0733565,-81.0909827,,,,,﻿jone001,,﻿J.F. O'Neill,,,,,,,1870,Savannah
+﻿sav.ga.0001,﻿cathedral,﻿Cathedral of St. John the Baptist,English,,﻿corner of Perry and Drayton streets,,,﻿Chatham County,﻿Savannah,﻿Savannah,﻿GA,,32.0733565,-81.0909827,,,,,﻿pwhe001,,﻿P. Whelan,,,,,,,1870,Savannah
+﻿sav.ga.0001,﻿cathedral,﻿Cathedral of St. John the Baptist,English,,﻿corner of Perry and Drayton streets,,,﻿Chatham County,﻿Savannah,﻿Savannah,﻿GA,,32.0733565,-81.0909827,,,,,﻿wham001,,﻿W.J. Hamilton,,,,,,,1870,Savannah
+﻿sav.ga.0001,﻿cathedral,﻿Cathedral of St. John the Baptist,English,,﻿corner of Perry and Drayton streets,,,﻿Chatham County,﻿Savannah,﻿Savannah,﻿GA,,32.0733565,-81.0909827,,,,,﻿atan001,,﻿A. Tanquerai,,,,,,,1870,Savannah
+﻿sav.ga.0001,﻿cathedral,﻿Cathedral of St. John the Baptist,English,,﻿corner of Perry and Drayton streets,,,﻿Chatham County,﻿Savannah,﻿Savannah,﻿GA,,32.0733565,-81.0909827,,,,,﻿jber001,,﻿John Bertazzi,,,,,,,1870,Savannah
+﻿sav.ga.0002,﻿church,﻿St. Patrick's,English,,﻿corner of Liberty and West Broad streets,,,﻿Chatham County,﻿Savannah,﻿Savannah,﻿GA,,32.0745249,-81.09391070000002,,,,,﻿pduf001,,﻿Peter Dufau,,﻿Pastor,,,,,1870,Savannah
+﻿sav.ga.0002,﻿church,﻿St. Patrick's,English,,﻿corner of Liberty and West Broad streets,,,﻿Chatham County,﻿Savannah,﻿Savannah,﻿GA,,32.0745249,-81.09391070000002,,,,,﻿cpre001,,﻿C.C. Prendergast,,,,,,,1870,Savannah
+﻿sav.ga.0003,﻿church,﻿Church of the Most Holy Trinity,English,,,,,,﻿Augusta,﻿Augusta,﻿GA,,33.4715171,-81.96679350000002,,,,,﻿gdug001,,﻿G. Duggan,,,,,,,1870,Savannah
+﻿sav.ga.0003,﻿church,﻿Church of the Most Holy Trinity,English,,,,,,﻿Augusta,﻿Augusta,﻿GA,,33.4715171,-81.96679350000002,,,,,﻿jkir001,,﻿John Kirby,,,,,,,1870,Savannah
+﻿sav.ga.0003,﻿church,﻿Church of the Most Holy Trinity,English,,,,,,﻿Augusta,﻿Augusta,﻿GA,,33.4715171,-81.96679350000002,,,,,﻿joha001,,﻿James O'Hara,,,,,,,1870,Savannah
+﻿sav.ga.0004,﻿church,﻿Church of the Assumption,English,,,,,,﻿Macon,﻿Macon,﻿GA,,32.8406946,-83.6324022,,,,,﻿lbaz001,,﻿Louis Bazin,,,,,,,1870,Savannah
+﻿sav.ga.0005,﻿church,﻿Church of the Immaculate Conception,English,,,,,,﻿Atlanta,﻿Atlanta,﻿GA,,33.748752,-84.38768449999998,,,,,﻿tore001,,﻿Thomas O'Reilly,,,,,,,1870,Savannah
+﻿sav.ga.0006,﻿church,﻿Church of St. Philip and St. James,English,,,,,,﻿Columbus,﻿Columbus,﻿GA,,32.4609764,-84.9877094,,,,,﻿mcul001,,﻿Michael Cullinan,,,,,,,1870,Savannah
+﻿sav.ga.0007,﻿mission,not recorded,English,,,,﻿McIntosh County,﻿McIntosh County,﻿Darien,﻿Darien,﻿GA,,31.3702255,-81.43399029999998,﻿sav.ga.0002,"﻿Attended by the Clergy of St. Patrick's, Savannah",,,,,,,,,,,,1870,Savannah
+﻿sav.ga.0008,﻿mission,not recorded,English,,,,﻿Glynn County,﻿Glynn County,﻿Brunswick,﻿Brunswick,﻿GA,,31.1510919,-81.4878157,﻿sav.ga.0002,"﻿Attended by the Clergy of St. Patrick's, Savannah",,,,,,,,,,,,1870,Savannah
+﻿sav.ga.0009,﻿mission,not recorded,English,,,,﻿Camden County,﻿Camden County,﻿St. Mary's,﻿St. Mary's,﻿GA,,30.7478954,-81.5706109,﻿sav.ga.0002,"﻿Attended by the Clergy of St. Patrick's, Savannah",,,,,,,,,,,,1870,Savannah
+﻿sav.ga.0010,﻿church,﻿Purification of the B.V.M.,English,,,,﻿Henry County,﻿Henry County,﻿Locust Grove,﻿Locust Grove,﻿GA,,33.3459495,-84.109083,﻿sav.ga.0003,﻿Visited from Augusta,"﻿once a month, on the second Sunday of the month",,,,,,,,,,,1870,Savannah
+﻿sav.ga.0011,﻿church,not recorded,English,,,,﻿Wilkes County,﻿Wilkes County,﻿Washington,﻿Washington,﻿GA,,33.7367948,-82.7393089,﻿sav.ga.0003,﻿Attended from Augusta,﻿once a month,,,,,,,,,,,1870,Savannah
+﻿sav.ga.0012,﻿mission,not recorded,English,,,,,﻿Hancock County,﻿Sparta,﻿Sparta,﻿GA,,33.2757006,-82.9762589,﻿sav.ga.0003,﻿Attended from Augusta,,,,,,,,,,,,1870,Savannah
+﻿sav.ga.0013,﻿church,not recorded,English,,,,,﻿Dougherty County,﻿Albany,﻿Albany,﻿GA,,31.5785074,-84.155741,﻿sav.ga.0004,﻿Attended from Macon,,,,,,,,,,,,1870,Savannah
+﻿sav.ga.0014,﻿mission,not recorded,English,,,,,﻿Sumter County,﻿Americus,﻿Americus,﻿GA,,32.0723861,-84.23268759999998,﻿sav.ga.0004,﻿Attended from Macon,,,,,,,,,,,,1870,Savannah
+﻿sav.ga.0015,﻿mission,not recorded,English,,,,,﻿Randolph County,﻿Cuthbert,﻿Cuthbert,﻿GA,,31.7712748,-84.7893658,﻿sav.ga.0004,﻿Attended from Macon,,,,,,,,,,,,1870,Savannah
+﻿sav.ga.0016,﻿mission,not recorded,English,,,,,﻿Baldwin County,﻿Milledgeville,﻿Milledgeville,﻿GA,,33.0801429,-83.2320991,﻿sav.ga.0004,﻿Attended from Macon,,,,,,,,,,,,1870,Savannah
+﻿sav.ga.0017,﻿mission,not recorded,English,,,,,﻿Putnam County,﻿Eatonton,﻿Eatonton,﻿GA,,33.326799699999995,-83.38849609999998,﻿sav.ga.0004,﻿Attended from Macon,,,,,,,,,,,,1870,Savannah
+﻿sav.ga.0018,﻿mission,not recorded,English,,,,,﻿Pulaski County,﻿Hawkinsville,﻿Hawkinsville,﻿GA,,32.283773100000005,-83.4721177,﻿sav.ga.0004,﻿Attended from Macon,,,,,,,,,,,,1870,Savannah
+﻿sav.ga.0019,﻿mission,not recorded,English,,,,,﻿Peach County,﻿Fort Valley,﻿Fort Valley,﻿GA,,32.5537585,-83.8874084,﻿sav.ga.0004,﻿Attended from Macon,,,,,,,,,,,,1870,Savannah
+﻿sav.ga.0020,﻿mission,not recorded,English,,,,,﻿Clay County,﻿Fort Gaines,﻿Fort Gaines,﻿GA,,31.609056899999995,-85.0471505,﻿sav.ga.0004,﻿Attended from Macon,,,,,,,,,,,,1870,Savannah
+﻿sav.ga.0021,﻿mission,not recorded,English,,,,,﻿Whitfield County,﻿Dalton,﻿Dalton,﻿GA,,34.7698021,-84.9702228,﻿sav.ga.0005,﻿Attended from Atlanta,,,,,,,,,,,,1870,Savannah
+﻿sav.ga.0022,﻿mission,not recorded,English,,,,,﻿Floyd County,﻿Rome,﻿Rome,﻿GA,,34.257038,-85.16467259999997,﻿sav.ga.0005,﻿Attended from Atlanta,,,,,,,,,,,,1870,Savannah
+﻿sav.ga.0023,﻿mission,not recorded,English,,,,,﻿Clayton County,﻿Jonesboro,﻿Jonesboro,﻿GA,,33.521501300000004,-84.3538128,﻿sav.ga.0005,﻿Attended from Atlanta,,,,,,,,,,,,1870,Savannah
+﻿sav.ga.0024,﻿mission,not recorded,English,,,,,﻿Troup County,﻿Lagrange,﻿LaGrange,﻿GA,,33.0362218,-85.0322444,﻿sav.ga.0005,﻿Attended from Atlanta,,,,,,,,,,,,1870,Savannah
+﻿sav.ga.0025,﻿mission,not recorded,English,,,,﻿Murray County,﻿Murray County,﻿Spring Place,﻿Spring Place,﻿GA,,34.7581366,-84.8210512,﻿sav.ga.0005,﻿Attended from Atlanta,,,,,,,,,,,,1870,Savannah
+﻿sav.ga.0026,﻿mission,not recorded,English,,,,,,﻿West Point,﻿West Point,﻿GA,,32.877905600000005,-85.18327459999998,﻿sav.ga.0006,﻿Attended from Columbus,,,,,,,,,,,,1870,Savannah
+﻿sav.ga.0027,﻿mission,not recorded,English,,,,,﻿Fulton County,﻿Chattahoochee,﻿Chattahoochee Hills,﻿GA,,33.547972800000004,-84.7630682,﻿sav.ga.0006,﻿Attended from Columbus,,,,,,,,,,,,1870,Savannah
+﻿sav.ga.0028,﻿mission,not recorded,English,,,,,﻿Taylor County,﻿Butler,﻿Butler,﻿GA,,32.5570898,-84.2382482,﻿sav.ga.0006,﻿Attended from Columbus,,,,,,,,,,,,1870,Savannah
+﻿sav.ga.0029,"﻿convent, school",﻿Convent of the Sisters of Our Lady of Mercy,English,,,,,,﻿Savannah,﻿Savannah,﻿GA,,32.0808989,-81.09120300000002,,,,,﻿agn001,,﻿Agnes,,﻿Superior,,﻿professed sister,﻿The community of Savannah counts ten professed sisters,,1870,Savannah
+﻿sav.ga.0029,"﻿convent, school",﻿Convent of the Sisters of Our Lady of Mercy,English,,,,,,﻿Savannah,﻿Savannah,﻿GA,,32.0808989,-81.09120300000002,,,,,,,,,,,﻿novice,﻿three novices,,1870,Savannah
+﻿sav.ga.0029,"﻿convent, school",﻿Convent of the Sisters of Our Lady of Mercy,English,,,,,,﻿Savannah,﻿Savannah,﻿GA,,32.0808989,-81.09120300000002,,,,,,,,,,,﻿postulant,﻿two postulants,,1870,Savannah
+﻿sav.ga.0029,"﻿convent, school",﻿Convent of the Sisters of Our Lady of Mercy,English,,,,,,﻿Savannah,﻿Savannah,﻿GA,,32.0808989,-81.09120300000002,,,,,,,,,,,﻿boarder,"﻿boarders, 38",,1870,Savannah
+﻿sav.ga.0029,"﻿convent, school",﻿Convent of the Sisters of Our Lady of Mercy,English,,,,,,﻿Savannah,﻿Savannah,﻿GA,,32.0808989,-81.09120300000002,,,,,,,,,,,﻿day-pupil,"﻿day-pupils, 90",,1870,Savannah
+﻿sav.ga.0029,"﻿convent, school",﻿Convent of the Sisters of Our Lady of Mercy,English,,,,,,﻿Savannah,﻿Savannah,﻿GA,,32.0808989,-81.09120300000002,,,,,,,,,,,﻿free school pupil,"﻿free school pupils, 110",,1870,Savannah
+﻿sav.ga.0029,"﻿convent, school",﻿Convent of the Sisters of Our Lady of Mercy,English,,,,,,﻿Savannah,﻿Savannah,﻿GA,,32.0808989,-81.09120300000002,,,,,,,,,,,﻿children,"﻿orphans' school contains 34 little children, entirely dependent on the emoluments of the house for their support",,1870,Savannah
+﻿sav.ga.0030,﻿school,not recorded,English,,﻿attached to St. Patrick's Church,,,,﻿Savannah,﻿Savannah,﻿GA,,32.0808989,-81.09120300000002,,,,,,,,,,,,,﻿attended by the Sisters of Our Lady of Mercy.,1870,Savannah
+﻿sav.ga.0031,﻿school,not recorded,English,,,,,,﻿Savannah,﻿Savannah,﻿GA,,32.0808989,-81.09120300000002,,,,,,,,,,,,,"﻿under the direction of the Sisters of St. Joseph,",1870,Savannah
+﻿sav.ga.0033,﻿asylum,﻿Male Orphan Asylum,English,,﻿attached to the Cathedral of St. John the Baptist,,,,﻿Savannah,﻿Savannah,﻿GA,,32.0733565,-81.0909827,,,,,,,,,,,﻿boy,﻿It now has 42 small boys,,1870,Savannah
+﻿sav.ga.0034,﻿asylum,﻿Female Orphan Asylum,English,,,,,,,,﻿GA,,32.1574351,-82.907123,,,,,,,,,,,﻿orphan,﻿There are now 30 orphan girls in the institution,﻿under the superintendance of the Sisters of Mercy,1870,Savannah
+﻿sav.ga.0035,﻿school,not recorded,English,,,,,,﻿Savannah,﻿Savannah,﻿GA,,32.0808989,-81.09120300000002,,,,,,,,,,,,,,1870,Savannah
+﻿sav.ga.0036,﻿school,not recorded,English,,,,,,﻿Savannah,﻿Savannah,﻿GA,,32.0808989,-81.09120300000002,,,,,,,,,,,,,,1870,Savannah
+﻿sav.ga.0037,﻿school,not recorded,English,,,,,,﻿Savannah,﻿Savannah,﻿GA,,32.0808989,-81.09120300000002,,,,,,,,,,,,,,1870,Savannah
+﻿sav.ga.0038,﻿school,not recorded,English,,,,,,﻿Savannah,﻿Savannah,﻿GA,,32.0808989,-81.09120300000002,,,,,,,,,,,,,,1870,Savannah
+﻿sav.ga.0039,﻿academy,﻿Academy of St. Vincent of Paul,English,,,,,,,﻿Savannah,﻿GA,,32.07358437,-81.09033752,,,,,,,,,,,﻿young lady,﻿It had nearly 100 young ladies; it has now about 40,"﻿conducted by the Sisters of Mercy,",1870,Savannah
+﻿sav.ga.0040,﻿school,not recorded,English,,,,,,﻿Savannah,﻿Savannah,﻿GA,,32.0808989,-81.09120300000002,,,,,,,,,,,,,"﻿under charge of the Sisters of Mercy,",1870,Savannah
+﻿sav.ga.0041,﻿school,not recorded,English,,,,,,﻿Savannah,﻿Savannah,﻿GA,,32.0808989,-81.09120300000002,,,,,,,,,,,,,"﻿under charge of the Sisters of Mercy,",1870,Savannah
+﻿sav.ga.0042,﻿convent,﻿Convent of the Sisters of Mercy,English,,,,,,﻿Augusta,﻿Augusta,﻿GA,,33.4687314,-82.0283188,,,,,﻿mari001,,﻿Mary Ignatius,,﻿Local Superior,,﻿boarder,"﻿Boarders, 12",,1870,Savannah
+﻿sav.ga.0042,﻿convent,﻿Convent of the Sisters of Mercy,English,,,,,,﻿Augusta,﻿Augusta,﻿GA,,33.4687314,-82.0283188,,,,,,,,,,,﻿sister,"﻿Sisters, 5",,1870,Savannah
+﻿sav.ga.0042,﻿convent,﻿Convent of the Sisters of Mercy,English,,,,,,﻿Augusta,﻿Augusta,﻿GA,,33.4687314,-82.0283188,,,,,,,,,,,﻿orphan,"﻿orphans, 16",,1870,Savannah
+﻿sav.ga.0042,﻿convent,﻿Convent of the Sisters of Mercy,English,,,,,,﻿Augusta,﻿Augusta,﻿GA,,33.4687314,-82.0283188,,,,,,,,,,,﻿day-pupil,"﻿day-pupils, 80",,1870,Savannah
+﻿sav.ga.0042,﻿convent,﻿Convent of the Sisters of Mercy,English,,,,,,﻿Augusta,﻿Augusta,﻿GA,,33.4687314,-82.0283188,,,,,,,,,,,﻿children,"﻿children in free school, 30",,1870,Savannah
+﻿sav.ga.0043,﻿school,not recorded,English,,,,,,﻿Macon,﻿Macon,﻿GA,,32.8406946,-83.6324022,,,,,﻿vinc001,,﻿Vincent,,﻿Local Superior,,﻿sister,"﻿Sisters, 3",﻿The Sisters of Mercy. Sisters to Macon.,1870,Savannah
+﻿sav.ga.0043,﻿school,not recorded,English,,,,,,﻿Macon,﻿Macon,﻿GA,,32.8406946,-83.6324022,,,,,,,,,,,﻿day-pupil,"﻿day-pupils, 60",﻿The Sisters of Mercy. Sisters to Macon.,1870,Savannah
+﻿sav.ga.0044,﻿convent,﻿Convent of the Sisters of Mercy,English,,,,,,﻿Columbus,﻿Columbus,﻿GA,,32.4609764,-84.9877094,,,,,﻿bona001,,﻿Bonaventure,,﻿Superior,,,,﻿Sisters of Mercy,1870,Savannah
+﻿sav.ga.0045,"﻿convent, school",not recorded,English,,,,,,﻿Atlanta,﻿Atlanta,﻿GA,,33.750127500000005,-84.3885209,,,,,﻿dene0101,,﻿de Neri,,﻿Superior,,﻿sister,"﻿Sisters, 5",﻿Sisters of Mercy,1870,Savannah
+﻿sav.ga.0045,"﻿convent, school",not recorded,English,,,,,,﻿Atlanta,﻿Atlanta,﻿GA,,33.750127500000005,-84.3885209,,,,,,,,,,,﻿boarder,"﻿boarders, 14",﻿Sisters of Mercy,1870,Savannah
+﻿sav.ga.0045,"﻿convent, school",not recorded,English,,,,,,﻿Atlanta,﻿Atlanta,﻿GA,,33.750127500000005,-84.3885209,,,,,,,,,,,﻿day-pupil,"﻿day-pupils, 80",﻿Sisters of Mercy,1870,Savannah

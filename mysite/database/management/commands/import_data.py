@@ -13,7 +13,8 @@ class Command(BaseCommand):
         self.rec_church_person = set()
         self.rec_church_church = set()
 
-        folder_path = 'D:\\python\\Django\\data'
+        #folder_path = 'D:\\python\\Django\\data'
+        folder_path = os.path.join(os.path.abspath(os.getcwd(), 'data'))
         files = [f for f in os.listdir(folder_path) if f.endswith('.csv')]
 
         for file in files:
