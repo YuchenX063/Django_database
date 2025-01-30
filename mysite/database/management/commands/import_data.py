@@ -76,7 +76,7 @@ class Command(BaseCommand):
         #print(f"Found {len(person_info)} person records")
         for item in person_info:
             temp = (item['persID'], item['year'])
-            if temp not in self.rec_person and item['persID'] and person['persName']:
+            if temp not in self.rec_person and item['persID'] and item['persName']:
                 self.rec_person.add(temp)
                 person, created = Person.objects.get_or_create(**item)
                 #if created:
@@ -99,7 +99,7 @@ class Command(BaseCommand):
         for item in church_person_info:
             temp = (item['instID'], item['persID'], item['year'])
             #print(f"Processing Church_Person instance: {item}")
-            if temp not in self.rec_church_person and item['persID']:
+            if temp not in self.rec_church_person and item['persID'] and item['persName']:
                 self.rec_church_person.add(temp)
                 #print(item['instID'], item['persID'], item['year'])
                 try:
