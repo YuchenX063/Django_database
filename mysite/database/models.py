@@ -77,6 +77,20 @@ class Church_Person(models.Model):
     person_church = models.ForeignKey(Church, on_delete=models.CASCADE, related_name='persons')
     person = models.ForeignKey(Person, on_delete=models.CASCADE, related_name='person_churches')
 
+class Small_Church_Person(models.Model):
+    instID = models.CharField(max_length=255)
+    persID = models.CharField(max_length=255)
+    year_church = models.IntegerField()
+    year_person = models.IntegerField()
+    persTitle = models.CharField(max_length=255)
+    persName = models.CharField(max_length=255)
+
+    class Meta:
+        unique_together = (('instID', 'persID', 'year_church', 'year_person'),)
+
+    person_church = models.ForeignKey(Small_Church, on_delete=models.CASCADE, related_name='small_church_persons')
+    person = models.ForeignKey(Person, on_delete=models.CASCADE, related_name='person_small_churches')
+
 class Church_Church(models.Model):
     instID = models.CharField(max_length=255) #the id of church
     attendingInstID = models.CharField(max_length=255) #the id of small church

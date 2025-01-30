@@ -1,12 +1,19 @@
 import os
 import csv
+from django.db import IntegrityError
 from django.core.management.base import BaseCommand
-from database.models import Church, Person, Church_Person, Small_Church, Church_Church
+from database.models import Church, Person, Church_Person, Small_Church, Church_Church, Small_Church_Person
 
 class Command(BaseCommand):
     help = 'Import data from CSV files'
 
     def handle(self, *args, **kwargs):
+        Church.objects.all().delete()
+        Person.objects.all().delete()
+        Church_Person.objects.all().delete()
+        Small_Church.objects.all().delete()
+        Church_Church.objects.all().delete()
+
         self.rec_church = set()
         self.rec_person = set()
         self.rec_small_church = set()
@@ -51,68 +58,86 @@ class Command(BaseCommand):
 
         # Filter and import church data
         church_info = [{key: row[key] for key in church_keys if key in row} for row in df]
-        print(f"Found {len(church_info)} church records")
+        #print(f"Found {len(church_info)} church records")
         for item in church_info:
             temp = (item['instID'], item['year'])
             if temp not in self.rec_church and not item['attendingInstID']:
                 self.rec_church.add(temp)
-                church, created = Church.objects.get_or_create(**item)
-                if created:
-                    print(f"Created Church instance: {item}")
+                #print(f"Processing Church instance: {item}")
+                try:
+                    church, created = Church.objects.get_or_create(**item)
+                except IntegrityError as e:
+                    continue
+                #if created:
+                    #print(f"Created Church instance: {item}")
 
         # Filter and import person data
         person_info = [{key: row[key] for key in person_keys if key in row} for row in df]
-        print(f"Found {len(person_info)} person records")
+        #print(f"Found {len(person_info)} person records")
         for item in person_info:
             temp = (item['persID'], item['year'])
-            if temp not in self.rec_person and item['persID']:
+            if temp not in self.rec_person and item['persID'] and person['persName']:
                 self.rec_person.add(temp)
                 person, created = Person.objects.get_or_create(**item)
-                if created:
-                    print(f"Created Person instance: {item}")
+                #if created:
+                    #print(f"Created Person instance: {item}")
 
         # Filter and import small church data
         small_church_info = [{key: row[key] for key in small_church_keys if key in row} for row in df]
-        print(f"Found {len(small_church_info)} small church records")
+        #print(f"Found {len(small_church_info)} small church records")
         for item in small_church_info:
             temp = (item['instID'], item['year'])
             if temp not in self.rec_small_church and item['attendingInstID']:
                 self.rec_small_church.add(temp)
                 small_church, created = Small_Church.objects.get_or_create(**item)
-                if created:
-                    print(f"Created Small_Church instance: {item}")
+                #if created:
+                    #print(f"Created Small_Church instance: {item}")
 
         # Filter and import church-person data
         church_person_info = [{key: row[key] for key in church_person_keys if key in row} for row in df]
-        print(f"Found {len(church_person_info)} church-person records")
+        #print(f"Found {len(church_person_info)} church-person records")
         for item in church_person_info:
             temp = (item['instID'], item['persID'], item['year'])
             #print(f"Processing Church_Person instance: {item}")
             if temp not in self.rec_church_person and item['persID']:
                 self.rec_church_person.add(temp)
-                print(item['instID'], item['persID'], item['year'])
+                #print(item['instID'], item['persID'], item['year'])
                 try:
                     church = Church.objects.get(instID=item['instID'], year=item['year'])
+                    person = Person.objects.get(persID=item['persID'], year=item['year'])
+                    church_person, created = Church_Person.objects.get_or_create(
+                        instID=church.instID,
+                        persID=person.persID,
+                        year_church=church.year,
+                        year_person=person.year,
+                        persTitle=item['persTitle'],
+                        persName=item['persName'],
+                        person_church=church,
+                        person=person
+                    )
                 except Church.DoesNotExist:
-                    print(f"Church with instID {item['instID']} and year {item['year']} does not exist. Skipping.")
-                    continue
-                person = Person.objects.get(persID=item['persID'], year=item['year'])
-                church_person, created = Church_Person.objects.get_or_create(
-                    instID=church.instID,
-                    persID=person.persID,
-                    year_church=church.year,
-                    year_person=person.year,
-                    persTitle=item['persTitle'],
-                    persName=item['persName'],
-                    person_church=church,
-                    person=person
-                )
-                if created:
-                    print(f"Created Church_Person instance: {item}")
+                    try:
+                        church = Small_Church.objects.get(instID=item['instID'], year=item['year'])
+                        person = Person.objects.get(persID=item['persID'], year=item['year'])
+                        church_person, created = Small_Church_Person.objects.get_or_create(
+                            instID=church.instID,
+                            persID=person.persID,
+                            year_church=church.year,
+                            year_person=person.year,
+                            persTitle=item['persTitle'],
+                            persName=item['persName'],
+                            person_church=church,
+                            person=person
+                        )
+                    except Small_Church.DoesNotExist:
+                        print(f"Church or Small Church with instID {item['instID']} and year {item['year']} does not exist. Skipping.")
+                        continue
+                #if created:
+                    #print(f"Created Church_Person instance: {item}")
 
         # Filter and import church-church data
         church_church_info = [{key: row[key] for key in church_church_keys if key in row} for row in df]
-        print(f"Found {len(church_church_info)} church-church records")
+        #print(f"Found {len(church_church_info)} church-church records")
         for item in church_church_info:
             temp = (item['instID'], item['attendingInstID'], item['year'])
             if temp not in self.rec_church_church and item['attendingInstID']:
@@ -121,12 +146,12 @@ class Command(BaseCommand):
                 try:
                     church = Church.objects.get(instID=item['attendingInstID'], year=item['year'])
                 except Church.DoesNotExist:
-                    print(f"Church with instID {item['instID']} and year {item['year']} does not exist.")
+                    #print(f"Church with instID {item['instID']} and year {item['year']} does not exist.")
                     continue
                 try:
                     attending_church = Small_Church.objects.get(instID=item['instID'], year=item['year'])
                 except Small_Church.DoesNotExist:
-                    print(f"Attending Church with instID {item['attendingInstID']} and year {item['year']} does not exist.")
+                    #print(f"Attending Church with instID {item['attendingInstID']} and year {item['year']} does not exist.")
                     continue
                 church_church, created = Church_Church.objects.get_or_create(
                     instID=church.instID,
@@ -136,5 +161,5 @@ class Command(BaseCommand):
                     church=church,
                     small_church=attending_church
                 )
-                if created:
-                    print(f"Created Church_Church instance: {item}")
+                #if created:
+                    #print(f"Created Church_Church instance: {item}")

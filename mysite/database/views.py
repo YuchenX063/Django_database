@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from django.http import Http404
 from django.shortcuts import render, get_object_or_404
-from .models import Church, Person, Church_Person, Small_Church, Church_Church
+from .models import Church, Person, Church_Person, Small_Church, Church_Church, Small_Church_Person
 from django.core.paginator import Paginator
 from itertools import chain
 
@@ -12,6 +12,7 @@ def index(request):
     church_name = request.GET.get('church_name')
     person_name = request.GET.get('person_name')
     place_name = request.GET.get('place_name')
+    language = request.GET.get('language')
 
     church_id = request.GET.get('church_instID')
     person_id = request.GET.get('person_persID')
@@ -27,12 +28,15 @@ def index(request):
         church_list = church_list.filter(instName__icontains=church_name)
         small_church_list = small_church_list.filter(instName__icontains=church_name)
         related_persons = Church_Person.objects.filter(person_church__instName__icontains=church_name).values_list('person', flat=True)
-        person_list = person_list.filter(id__in=related_persons)
+        related_small_church_persons = Small_Church_Person.objects.filter(person_church__instName__icontains=church_name).values_list('person', flat=True)
+        person_list_church = person_list.filter(id__in=related_persons)
+        person_list_small_church = person_list.filter(id__in=related_small_church_persons)
+        person_list = person_list_church | person_list_small_church
     
     if place_name:
-        church_list = church_list.filter(place__icontains=place_name)
-        small_church_list = small_church_list.filter(place__icontains=place_name)
-        related_persons = Church_Person.objects.filter(person_church__place__icontains=place_name).values_list('person', flat=True)
+        church_list = church_list.filter(city_reg__icontains=place_name)
+        small_church_list = small_church_list.filter(city_reg__icontains=place_name)
+        related_persons = Church_Person.objects.filter(person_church__city_reg__icontains=place_name).values_list('person', flat=True)
         person_list = person_list.filter(id__in=related_persons)
     
     if diocese:
@@ -46,6 +50,12 @@ def index(request):
         related_churches = Church_Person.objects.filter(person__persName__icontains=person_name).values_list('person_church', flat=True)
         church_list = church_list.filter(id__in=related_churches)
         small_church_list = small_church_list.filter(id__in=related_churches)
+    
+    if language:
+        church_list = church_list.filter(language__icontains=language)
+        small_church_list = small_church_list.filter(language__icontains=language)
+        related_persons = Church_Person.objects.filter(person_church__language__icontains=language).values_list('person', flat=True)
+        person_list = person_list.filter(id__in=related_persons)
 
     if church_id:
         church_list = Church.objects.filter(instID=church_id)
