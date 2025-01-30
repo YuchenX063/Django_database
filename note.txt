@@ -1,0 +1,9 @@
+Update data:
+1. download data and replace old data with new data
+2. commit changes to the git repository and push
+3. connect to the server using git bash; use the virtual environment (myprojectenv; source bin/activate)
+4. run git stash
+5. run git pull
+6. go to the manage.py directory and run python manage.py import_data
+7. run sudo systemctl daemon-reload
+8. run sudo systemctl restart django-app
