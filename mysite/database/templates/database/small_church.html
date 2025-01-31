@@ -61,8 +61,6 @@
                 <tbody>
                     {% for person in related_persons %}
                     <tr>
-                        <td>{{ forloop.counter }}</td>
-                        <th scope="row">Name</th>
                         <td>
                             <a href="{% url 'person_detail' person.persID|urlencode person.year_person %}">{{ person.persTitle }} {{ person.persName }}</a>
                         </td>

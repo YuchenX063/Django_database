@@ -37,37 +37,51 @@ def index(request):
         church_list = church_list.filter(city_reg__icontains=place_name)
         small_church_list = small_church_list.filter(city_reg__icontains=place_name)
         related_persons = Church_Person.objects.filter(person_church__city_reg__icontains=place_name).values_list('person', flat=True)
-        person_list = person_list.filter(id__in=related_persons)
+        related_small_church_persons = Small_Church_Person.objects.filter(person_church__city_reg__icontains=place_name).values_list('person', flat=True)
+        person_list_church = person_list.filter(id__in=related_persons)
+        person_list_small_church = person_list.filter(id__in=related_small_church_persons)
+        person_list = person_list_church | person_list_small_church
     
     if diocese:
         church_list = church_list.filter(diocese__icontains=diocese)
         small_church_list = small_church_list.filter(diocese__icontains=diocese)
         related_persons = Church_Person.objects.filter(person_church__diocese__icontains=diocese).values_list('person', flat=True)
-        person_list = person_list.filter(id__in=related_persons)
+        related_small_church_persons = Small_Church_Person.objects.filter(person_church__diocese__icontains=diocese).values_list('person', flat=True)
+        person_list_church = person_list.filter(id__in=related_persons)
+        person_list_small_church = person_list.filter(id__in=related_small_church_persons)
+        person_list = person_list_church | person_list_small_church
     
     if person_name:
         person_list = person_list.filter(persName__icontains=person_name)
         related_churches = Church_Person.objects.filter(person__persName__icontains=person_name).values_list('person_church', flat=True)
+        related_small_churches = Small_Church_Person.objects.filter(person__persName__icontains=person_name).values_list('person_church', flat=True)
         church_list = church_list.filter(id__in=related_churches)
-        small_church_list = small_church_list.filter(id__in=related_churches)
+        small_church_list = small_church_list.filter(id__in=related_small_churches)
     
     if language:
         church_list = church_list.filter(language__icontains=language)
         small_church_list = small_church_list.filter(language__icontains=language)
         related_persons = Church_Person.objects.filter(person_church__language__icontains=language).values_list('person', flat=True)
-        person_list = person_list.filter(id__in=related_persons)
+        related_small_church_persons = Small_Church_Person.objects.filter(person_church__language__icontains=language).values_list('person', flat=True)
+        person_list_church = person_list.filter(id__in=related_persons)
+        person_list_small_church = person_list.filter(id__in=related_small_church_persons)
+        person_list = person_list_church | person_list_small_church
 
     if church_id:
         church_list = Church.objects.filter(instID=church_id)
         small_church_list = Small_Church.objects.filter(instID=church_id)
         related_persons = Church_Person.objects.filter(person_church__instID__icontains=church_id).values_list('person', flat=True)
-        person_list = Person.objects.filter(id__in=related_persons)
+        related_small_church_persons = Small_Church_Person.objects.filter(person_church__instID__icontains=church_id).values_list('person', flat=True)
+        person_list_church = person_list.filter(id__in=related_persons)
+        person_list_small_church = person_list.filter(id__in=related_small_church_persons)
+        person_list = person_list_church | person_list_small_church
 
     if person_id:  
         person_list = Person.objects.filter(persID=person_id)
         related_churches = Church_Person.objects.filter(person__persID__icontains=person_id).values_list('person_church', flat=True)
+        related_small_churches = Small_Church_Person.objects.filter(person__persID__icontains=person_id).values_list('person_church', flat=True)
         church_list = Church.objects.filter(id__in=related_churches)
-        small_church_list = Small_Church.objects.filter(id__in=related_churches)
+        small_church_list = Small_Church.objects.filter(id__in=related_small_churches)
 
     if year:
         church_list = church_list.filter(year=year)
@@ -121,8 +135,7 @@ def church_detail(request, instID, year): #query a church by instID and year
     else:
         try:
             small_church = Small_Church.objects.get(instID=instID, year=year)
-            #related_persons = Church_Person.objects.filter(person_church=small_church)
-            related_persons = []
+            related_persons = Small_Church_Person.objects.filter(person_church=small_church)
             attending_church_name = None
             if small_church.attendingInstID:
                 try:
@@ -141,4 +154,5 @@ def church_detail(request, instID, year): #query a church by instID and year
 def person_detail(request, persID, year): #query a person by persID and year
     person = get_object_or_404(Person, persID=persID, year=year)
     related_churches = Church_Person.objects.filter(person=person)
-    return render(request, 'database/person.html', {'person': person, 'related_churches': related_churches})
+    related_small_churches = Small_Church_Person.objects.filter(person=person)
+    return render(request, 'database/person.html', {'person': person, 'related_churches': related_churches, 'related_small_churches': related_small_churches})

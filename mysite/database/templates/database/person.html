@@ -56,9 +56,19 @@
                         <td>{{ cp.person_church.year }}</td>
                     </tr>
                     {% empty %}
-                    <tr>
-                        <td colspan="3">No related churches found.</td>
-                    </tr>
+                        {% for cp in related_small_churches %}
+                        <tr>
+                            <td>
+                                <a href="{% url 'church_detail' instID=cp.instID year=cp.year_church %}">{{ cp.person_church.instName }}</a>
+                            </td>
+                            <td>{{ cp.person_church.church_type }}</td>
+                            <td>{{ cp.person_church.year }}</td>
+                        </tr>
+                        {% empty %}
+                        <tr>
+                            <td colspan="3">No related churches found.</td>
+                        </tr>
+                        {% endfor %}
                     {% endfor %}
                 </tbody>
             </table>
